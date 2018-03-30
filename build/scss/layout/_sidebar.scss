@@ -1,0 +1,310 @@
+/* sidebar styles */
+.sidebar {
+	font-weight: 500;
+
+	label {
+		font-weight: 500;
+	}
+
+	.sidebar-holder {
+		box-shadow: 0 2px 2px rgba(1, 2, 2, 0.1);
+	}
+
+	.heading {
+		padding: 20px 30px;
+		background: $white;
+	}
+
+	.sub-link {
+		margin-left: 30px;
+		display: block;
+		font-weight: 500;
+
+		a {
+			color: $gray;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	h3 {
+		margin: 0;
+		padding: 0 0 0 50px;
+		color: $text-color;
+		font-size: 1.143em;
+		line-height: 1.5em ;
+		position: relative;
+		text-transform: uppercase;
+
+		&:before {
+			content: "\e928";
+			font: 24px/18px 'icomoon';
+			position: absolute;
+			left: 0;
+			top: 5px;
+		}
+	}
+
+	.side-block {
+		box-shadow: 0 2px 2px rgba(1, 2, 2, 0.1);
+	}
+
+	.panel-group {
+		.panel-default {
+			border: 0;
+			margin: 0;
+		}
+	}
+
+	.panel-title {
+		font-size: 1em;
+		line-height: 1.7124em;
+		letter-spacing: 0.05em;
+	}
+
+	.panel-heading {
+		a {
+			display: block;
+			text-transform: uppercase;
+			padding: 10px 50px 10px 30px;
+			background: $desert-storm;
+			color: $primary-color;
+			box-shadow: 0 1px 1px rgba(1, 2, 2, 0.1);
+			position: relative;
+
+			&.collapsed {
+				&:after {
+					@include rotate(180deg);
+				}
+			}
+
+			&:after {
+				content: "\e906";
+				font: 14px/12px 'icomoon';
+				position: absolute;
+				right: 30px;
+				top: 15px;
+				transition: transform .3s linear;
+			}
+		}
+	}
+
+	.title {
+		display: block;
+		font-size: 1.143em;
+		margin-bottom: 10px;
+	}
+
+	.panel-body {
+		background: $white;
+		padding: $global-xs-space 30px;
+		color: $gray;
+	}
+
+	@include breakpoint-min($screen-md) {
+		float: left;
+	}
+}
+
+.mobile-openclose {
+	@include breakpoint-max($screen-sm - 1) {
+		max-height: 0;
+		overflow: hidden;
+		padding: 0;
+		min-height: 0;
+		max-width: 470px;
+		margin: 0 auto;
+
+		.layout-holder {
+			padding-bottom: $global-xs-space;
+		}
+	}
+}
+
+/* sidebar list styles */
+.side-list {
+	@extend %listreset;
+
+	&.check-list {
+		margin-bottom: 5px;
+		
+		li {
+			margin-bottom: 5px;
+		}
+	}
+
+	&.post-list {
+		li {
+			position: relative;
+			margin-bottom: $global-xs-space;
+			padding-bottom: 5px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 100%;
+				height: 2px;
+				width: 30px;
+				background: $platinum;
+			}
+		}
+		time {
+			display: block;
+			font-size: 12px;
+		}
+	}
+
+	&.horizontal-list {
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 15px;
+			margin-bottom: 20px;
+			margin-right: -.25em;
+			text-align: center;
+		}
+	}
+
+	&.gallery-side-list.horizontal-list {
+		li {
+			width: 33%;
+			padding-left: 5px;
+			padding-right: 5px;
+			margin-bottom: 10px;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&.hovered-list {
+		a {
+			color: $gray;
+			
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	&.region-list {
+		.text {
+			width: calc(100% - 50px);
+		}
+	}
+
+	[class^="icon-"], 
+	[class*=" icon-"] {
+		font-size: 25px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	a {
+		position: relative;
+
+		&:hover {
+			.popup {
+				display: block;
+			}
+		}
+	}
+
+	li {
+		margin-bottom: 15px;
+
+		&.active {
+			a {
+				color: $primary-color;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.ico-holder {
+		display: inline-block;
+		vertical-align: middle;
+		width: 45px;
+
+		img {
+			width: 25px;
+		}
+	}
+
+	.hover {
+		display: none;
+	}
+
+	.text {
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 20px);
+	}
+
+	@include breakpoint-min($screen-sm) {
+		&.horizontal-list {
+			li {
+				width: 25%;
+				padding: 0 5px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&.gallery-side-list {
+			margin: 0 -10px;
+
+			li {
+				width: 33.3333%;
+				padding: 0 10px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		&.horizontal-list {
+			margin-bottom: -25px;
+
+			li {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+// sidebar accordion style for mobile devices
+.grid-view-sidebar .accordion {
+	@include breakpoint-max($screen-md - 1) {
+		.collapse {
+			display: block;
+			height: auto !important;
+		}
+
+		.collapsing {
+			height: auto !important;
+		}
+
+		.collapse.in {
+			display: none;
+		}
+	}
+}
+
+.price-input {
+	width: 100%;
+	border: 0;
+	background: none;
+	color: $text-color;
+	font-size: 14px;
+}

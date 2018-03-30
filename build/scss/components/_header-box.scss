@@ -1,0 +1,52 @@
+/* header box styles */
+.header-box {
+	padding: 10px;
+	border: 1px solid $desert-storm;
+	display: block;
+	margin: 0 0 $global-xs-space;
+	overflow: hidden;
+	font-weight: 400;
+	font-family: $montserrat;
+
+	&:hover {
+		color: $primary-color;
+
+		.star-rating {
+			color: $secondary-color;
+		}
+	}
+
+	.title {
+		font-weight: 400;
+		margin-right: 10px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.star-rating {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+
+	.value {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.link-right {
+		float: right;
+		max-width: 40%;
+	}
+
+	a{
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding: 20px 30px;
+		font-size: 16px;
+	}
+}

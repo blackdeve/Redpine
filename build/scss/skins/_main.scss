@@ -1,0 +1,135 @@
+// import colors
+@import '../base/colors';
+
+ // default colors
+$neutral-color: $shark;
+$primary-color: $mongoose;
+$secondary-color: $outer-space-solid;
+$teritory-color: $albaster;
+$quaternary-color: $platinum;
+
+// heading color
+$heading-color: $secondary-color;
+
+// navigation hover color 
+$nav-hover-color: $primary-color;
+
+// header divider color
+$header-border-color: #2d2d2d;
+
+// dropdown nav hover color
+$dropdown-nav-hover-color: $primary-color;
+
+// revolution slider button style
+$rev-button-border-color: $kokoda;
+$rev-button-border-hover-color: $kokoda;
+$rev-button-bg-color: none;
+$rev-button-bg-hover-color: $kokoda;
+$rev-button-text-color: $primary-color;
+$rev-button-text-hover-color: $white;
+
+// global button color
+$button-bg: $kokoda;
+$button-hover-bg: $primary-color;
+$button-link-color: $white;
+$button-link-hover-color: $white;
+$border-default-hover-color: $platinum;
+
+// info button sub color
+$button-info-sub-bg: $kokoda;
+$button-info-sub-bg-hover: lighten($button-info-sub-bg, 10%);
+$button-info-sub-border-hover: lighten($button-info-sub-bg, 10%);
+$button-info-sub-color: $white;
+$button-info-sub-hover-color: $white;
+
+// info button color
+$button-info-bg: $primary-color;
+$button-info-bg-hover: darken($button-info-bg, 10%);
+$button-info-border-hover: darken($button-info-bg, 10%);
+$button-info-color: $white;
+$button-info-hover-color: $white;
+
+// banner button color
+$button-banner-border-color: $kokoda;
+$button-banner-bg-hover-color: $kokoda;
+
+// article link color
+$article-link-hover-color: $primary-color;
+$thumbnail-link-hover-color: $primary-color;
+
+// list price color 
+$list-price-color: $scarpa-flow;
+
+// pagination styles
+$pagination-active-bg: $primary-color;
+
+// banner and slider heading colors
+$banner-heading-color: $white;
+$banner-heading-sub-color: $primary-color;
+$revolution-text-color: $primary-color;
+
+// iconbar link hover
+$iconbar-link-hover-color: $primary-color;
+
+// tour search form styles
+$trip-background: $kokoda;
+$trip-form-color: $white;
+$trip-border: $cape-cod;
+$trip-select-color: $primary-color;
+$trip-select-bg: rgba($shark,.7);
+$btn-trip-bg: $shark;
+$btn-trip-color: $primary-color;
+$trip-shadow: none;
+
+// special block
+$special-block: $secondary-color;
+$special-block-border-color: lighten($special-block, 10%);
+
+// browse block
+$browse-block-1: $primary-color;
+$browse-block-2: $secondary-color;
+
+// count block
+$block-1: $kokoda;
+$block-2: $verdigris;
+$block-3: $outer-space-solid;
+$block-4: $mongoose;
+
+// hover text color for guides
+$guide-text-hover-color: $primary-color;
+
+// guide caption background
+$guide-caption-bg: $kokoda;
+$guide-caption-hover-bg: $secondary-color;
+
+// map holder of list view with detail page
+$listview-mapbg: $secondary-color;
+
+// trip info of tour detail page
+$trip-info-bg: $teritory-color;
+
+// tab link of tour detail page
+$tab-link-active-color: $primary-color;
+$tab-link-color: $gray;
+
+// error page background
+$error-page-bg: $kokoda;
+
+// progress bar color for about page
+$progress-bar-color: $primary-color;
+
+// partner block border color
+$partner-border-color: $secondary-color;
+
+// social icon color of footer
+$social-wrap-color: $kokoda;
+
+// footer newsletter form and footer nav title
+$newsletter-color: $kokoda;
+$footer-nav-title-color: $kokoda;
+
+// hover listing s3
+$listing-star-rating-color: $white;
+$listing-star-rating-disabled-color: $gray;
+$listing-star-rating-hover-color: $primary-color;
+$listing-caption-color: $primary-color;

@@ -1,0 +1,221 @@
+/* booking form styles */
+.booking-form,
+.twocol-form {
+	.form-holder {
+		box-shadow: 0.5px 0.9px 1px rgba(1, 2, 2, 0.1);
+		background: $desert-storm;
+		padding: 20px 10px;
+		margin-bottom: $global-sm-space;
+
+		.form-control {
+			border-color: darken($desert-storm, 10);
+			background: transparent;
+			color: $scarpa-flow;
+			height: 40px;
+
+			&::-webkit-input-placeholder {font-style: italic;}
+			&:-moz-placeholder           {font-style: italic;}
+			&::-moz-placeholder          {font-style: italic;}
+			&:-ms-input-placeholder      {font-style: italic;}
+
+			&:focus,
+			&:active {
+				border-color: darken($desert-storm, 20);
+			}
+		}
+	}
+
+	.col-md-6 {
+		&:last-child {
+			.form-holder {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	textarea.form-control {
+		min-height: 190px !important;
+		resize: none;
+	}
+
+	h2 {
+		color: $text-color;
+		padding-bottom: $global-xs-space;
+		margin-bottom: 25px;
+		border-bottom: 1px solid rgba(125,125,125,0.2);
+	}
+
+	label {
+		margin-bottom: 20px;
+		text-transform: capitalize;
+	}
+
+	.hold {
+		margin-bottom: 20px;
+	}
+
+	.option {
+		@extend %listreset;
+		padding-bottom: 20px;
+		padding-top: 10px;
+
+		li {
+			overflow: hidden;
+			margin-bottom: 5px;
+		}
+
+		label {
+			margin-bottom: 0;
+		}
+
+		.info-hold {
+			padding-left: 30px;
+		}
+	}
+
+	.payment-option {
+		display: none;
+		float: none;
+		padding-left: 30px;
+	}
+
+	.order-block {
+		padding-top: 25px;
+	}
+
+	[type="submit"].btn {
+		width: 100%;
+		padding: 10px;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		.form-holder {
+			padding: $global-sm-space 30px;
+		}
+
+		.payment-option {
+			display: block;
+		}
+
+		h2 {
+			margin-bottom: $global-sm-space;
+		}
+
+		.wrap {
+			padding-right: 30px;
+		}
+
+		.btn-hold {
+			padding-top: $global-sm-space;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.form-holder {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* product table styles */
+.product-table {
+	border: 2px solid darken($desert-storm, 10);
+	width: 100%;
+	margin-bottom: $global-md-space;
+
+	td,
+	th {
+		padding: 10px;
+	}
+
+	th {
+		border-bottom: 1px solid rgba(125,125,125,0.2);
+	}
+
+	tfoot {
+		td {
+			font-weight: 700;
+			border-top: 1px solid rgba(125,125,125,0.2);
+		}
+	}
+
+	.amount {
+		font-weight: 700;
+	}
+
+	.title,
+	time {
+		display: block;
+	}
+
+	.title {
+		font-weight: 700;
+	}
+
+	@include breakpoint-min($screen-md) {
+		td,
+		th {
+			padding: 15px 20px;
+		}
+	}
+}
+
+/* top heading box styles */
+.top-box {
+	font-size: 16px;
+	line-height: 1.2;
+	font-weight: 400;
+	margin-bottom: 25px;
+	font-family: $montserrat;
+
+	.holder {
+		color: $text-color;
+		display: block;
+		border: 2px solid $desert-storm;
+		padding: 10px 20px;
+		overflow: hidden;
+		position: relative;
+		transition: border 0.2s linear;
+
+		&:hover {
+			.arrow {
+				right: 20px;
+			}
+		}
+	}
+
+	.left {
+		display: none;
+	}
+
+	.right {
+		float: left;
+	}
+
+	.arrow {
+		position: absolute;
+		right: 35px;
+		top: 50%;
+		transform: translate(0, -50%) rotate(270deg);
+		transition: right 0.2s linear;
+
+		&:before {
+			content: "\e906";
+			font: 18px/1 'icomoon';
+		}
+	}
+	@include breakpoint-min($screen-sm) {
+		.holder {
+			padding: 25px 60px 25px 30px;
+		}
+
+		.left {
+			display: block;
+			float: left;
+		}
+
+		.right {
+			float: right;
+		}
+	}
+}

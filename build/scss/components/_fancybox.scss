@@ -1,0 +1,172 @@
+/* fancybox */
+.fancybox-overlay {
+	background: rgba($black, .87);
+	min-width: 320px;
+}
+
+.fancybox-skin {
+	border-radius: 0;
+	padding: 20px !important;
+	background: none;
+	box-shadow: none !important;
+}
+
+.fancybox-close,
+.fancybox-prev span, 
+.fancybox-next span {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: rgba($black, .6);
+	box-shadow: 0 0 1px rgba($black, .4);
+
+	&:after {
+		@include translate(-50%, -50%);
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		font: 8px/30px 'icomoon';
+	}
+}
+
+.fancybox-prev span, 
+.fancybox-next span {
+	display: block;
+	vertical-align: middle;
+	background: none;
+	box-shadow: none;
+	visibility: visible;
+	position: relative;
+	left: auto;
+	right: auto;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	top: 0;
+}
+
+.fancybox-close {
+	top: 20px;
+	right: 20px;
+	border-radius: 0;
+	position: absolute;
+	color: $white;
+
+	&:hover {
+		background: $black;
+
+		&:after {
+			color: $white;
+		}
+	}
+
+	&:after {
+		content: "\e914";
+		font-size: 14px;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		&:after {
+			font-size: 16px;
+		}
+	}
+}
+
+.fancybox-nav {
+	width: 30px;
+	height: 30px;
+	top: 50%;
+	margin-top: -15px;
+	background: rgba($black, .6);
+	text-align: center;
+	color: $white;
+
+	&:hover {
+		background: $black;
+		color: $white;
+	}
+}
+
+.fancybox-prev span, 
+.fancybox-next span {
+	&:after {
+		@include rotate(90deg);
+		content: "\e906";
+		text-align: center;
+		left: 3px;
+		top: 0;
+		font-size: 20px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		&:after {
+			left: 7px;
+		}
+	}
+}
+
+.fancybox-next span {
+	&:after {
+		@include rotate(270deg);
+		left: auto;
+		right: 3px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		&:after {
+			right: 7px;
+		}
+	}
+}
+
+.fancybox-title {
+	right: 0;
+	left: 0;
+	margin: 0 20px -9px;
+	width: auto !important;
+
+	.child {
+		margin: 0;
+		display: block;
+		border-radius: 0;
+		padding: 5px 20px;
+		background: $shark;
+	}
+}
+
+@include breakpoint-min($screen-md) {
+	.fancybox-close {
+		width: 60px;
+		height: 60px;
+
+		&:after {
+			line-height: 60px;
+		}
+	}
+
+	.fancybox-nav {
+		width: 60px;
+		height: 60px;
+		margin-top: -$global-xs-space;
+
+		&.fancybox-next {
+			span {
+				&:after {
+					left: auto;
+					right: 20px;
+				}
+			}
+		}
+
+		span {
+			width: 60px;
+			height: 60px;
+
+			&:after {
+				line-height: 60px;
+				left: 20px;
+			}
+		}
+	}
+}
+

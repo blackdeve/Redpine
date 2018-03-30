@@ -1,0 +1,101 @@
+/* tab container styles */
+.tab-container {
+	position: relative;
+
+	.nav-tabs {
+		@extend %justify;
+	}
+
+	.tab-pane {
+		display: block !important; // to override js inline style
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+
+		&.active {
+			position: static;
+		}
+	}
+}
+
+.nav-wrap {
+	background: $shark;
+	@extend %clearfix;
+	z-index: 3;
+
+	@include breakpoint-max($screen-tab - 1) {
+		&.is-stuck {
+			top: 0 !important;
+		}
+	}
+}
+
+/* tab styles */
+.nav-tabs {
+	font-size: 1.286em;
+	padding: 10px 0;
+	font-family: $montserrat;
+
+	> li {
+		border: 0;
+		float: none;
+		display: inline-block;
+		margin: 0;
+		padding: 10px 5px;
+		width: 49%;
+
+		&.active , 
+		&:focus {
+			a {
+				background: none;
+				border: 0;
+				color: $tab-link-active-color;
+				margin: 0;
+
+				&:hover ,
+				&.active ,
+				&:focus {
+					background: none;
+					margin: 0;
+					border: 0;
+					color: $tab-link-active-color;
+				}
+			}
+		}
+
+		> a {
+			background: none;
+			border: 0;
+			margin: 0;
+			color: $tab-link-color;
+			padding: 0;
+			display: inline-block;
+
+			&:hover {
+				background: none;
+				color: $tab-link-active-color;
+			}
+		}
+	}
+
+	@include breakpoint-max($screen-mobile - 1){
+		> li {
+			font-size: 16px;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding: 0;
+
+		> li {
+			padding: 15px 10px;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		> li {
+			width: auto;
+			padding: 25px 10px;
+		}
+	}
+}

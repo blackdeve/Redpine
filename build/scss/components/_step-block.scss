@@ -1,0 +1,21 @@
+/* step block styles */
+.step-block {
+	padding: $global-sm-space 0;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	font-family: $montserrat;
+
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		padding: $global-md-space 0;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		padding: $global-space 0;
+	}
+}

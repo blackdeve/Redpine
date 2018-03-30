@@ -1,0 +1,105 @@
+/* pagination styles */
+.pagination-wrap {
+	padding: 25px 20px;
+	text-align: center;
+	background: $white;
+	box-shadow: 0 1px 1px rgba(1, 2, 2, 0.1);
+
+	&.bg-gray {
+		background: $desert-storm;
+	}
+
+	.pagination {
+		@extend %listreset;
+		font-size: 0;
+		line-height: 0;
+		min-width: 170px;
+	}
+
+	.btn-next ,
+	.btn-prev {
+		font-size: 14px;
+		padding-top: 5px;
+		
+		a {
+			margin: 0;
+			width: auto;
+			height: auto;
+			border: 0;
+
+			&:hover {
+				background: none;
+				color: $primary-color;
+				border: 0;
+			}
+		}
+	}
+
+	.btn-prev {
+		float: left;
+
+		span {
+			@include rotate(180deg);
+			display: inline-block;
+		}
+	}
+
+	.btn-next {
+		float: right;
+	}
+
+	li {
+		display: inline-block;
+		padding: 0 5px;
+		vertical-align: middle;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 20px;
+
+		a {
+			padding: 0;
+			background: none;
+			border: 0;
+			line-height: 20px;
+			font-size: 16px;
+			width: 22px;
+			height: 22px;
+			display: block;
+			color: $link-color;
+
+			&:hover {
+				background: $pagination-active-bg;
+				color: $white;
+				border: 1px solid $desert-storm;
+			}
+		 }
+
+		&.active {
+			a {
+				color: $white;
+				border: 1px solid $desert-storm;
+				border-color: transparent;
+				background: $pagination-active-bg;
+
+				&:hover {
+					background: $pagination-active-bg;
+					color: $white;
+					border-color: transparent;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.btn-next ,
+		.btn-prev {
+			width: 70px;
+			font-size: 20px;
+			padding-top: 0;
+		}
+		li {
+			padding: 0 15px;
+		}
+	}
+}
+

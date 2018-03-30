@@ -1,0 +1,63 @@
+ /* progress bar holder styles */
+.bar-holder {
+	@extend %clearfix;
+	margin-bottom: -5px;
+
+	.title {
+		font-size: 1.143em;
+		line-height: 1;
+		display: block;
+		margin-bottom: 25px;
+	}
+}
+
+/* progressbar */
+.progress {
+	height: 20px;
+	background: $cape-cod;
+	box-shadow: none;
+	margin-bottom: $global-xs-space;
+	overflow: visible;
+
+	.progress-bar {
+		position: relative;
+		box-shadow: none;
+		background: $progress-bar-color;
+	}
+
+	.value {
+		position: absolute;
+		right: -35px;
+		font-style: italic;
+		font-size: 14px;
+		line-height: 1.2;
+		background: $secondary-color;
+		color: $white;
+		padding: 5px;
+		min-width: 50px;
+		top: -40px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 100%;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px 8px 0 0;
+			margin-left: -11px;
+			border-color: $secondary-color transparent transparent;
+		}
+	}
+}
+
+.progress-holder {
+	padding-top: $global-sm-space;
+	margin-bottom: -10px;
+
+	@include breakpoint-min ($screen-md) {
+		float: right;
+		padding-top: 0;
+	}
+}

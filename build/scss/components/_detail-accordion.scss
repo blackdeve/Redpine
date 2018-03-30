@@ -1,0 +1,129 @@
+/* detail accordion styles */
+.detail-accordion {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	counter-reset: ol-counter;
+
+	> li {
+		position: relative;
+		margin-bottom: 5px;
+		border: 1px solid $desert-storm;
+
+		&:before {
+			content: counter(ol-counter);
+			counter-increment: ol-counter;
+			position: absolute; 
+			top: 6px;
+			left: 12px;
+			width: 43px;
+			line-height: 55px;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		&:after {
+			border: 2px solid $platinum;
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			content: '';
+			left: 16px;
+			height: 35px;
+			width: 35px;
+			position: absolute;
+			top: 16px;
+		}
+
+		&:hover {
+			&:after {
+				border-color: $scarpa-flow;
+			}
+		}
+
+		&:not(.active){
+			> a{
+				&:after {
+					transform: rotate(270deg);
+					-webkit-transform: rotate(270deg);
+					-ms-transform: rotate(270deg);
+				}
+			}
+		}
+
+		&.active {
+			box-shadow: 1px 1px 1px rgba(1, 2, 2, 0.07);
+
+			&:after {
+				border-color: $scarpa-flow;
+			}
+			
+			> a {
+				&:after {
+					color: $gray;
+				}
+
+				&:before {
+					border-color: $gray;
+				}
+			}
+		}
+
+		> a{
+			display: block;
+			padding: 10px 20px 10px 80px;
+			position: relative;
+			transition: all linear .2s;
+
+			&:after {
+				content: "\e906";
+				font: 18px/10px 'icomoon';
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				color: $platinum;
+				margin-top: -5px;
+				transition: all linear .2s;
+			}
+
+			span {
+				font-style: italic;
+			}
+		}
+	}
+
+	.title {
+		display: block;
+		font-size: 1.143em;
+		margin-bottom: -5px;
+		font-weight: 400;
+		font-family: $montserrat;
+	}
+
+	.slide {
+		padding: 0 20px;
+	}
+
+	.slide-holder {
+		padding: 25px 0 20px;
+		border-top: 1px solid $bon-jour;
+		margin-left: 60px;
+		margin-top: 10px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		> li {
+			> a {
+				padding-left: 100px;
+			}
+		}
+		.slide-holder {
+			padding-right: 60px;
+			margin-left: 80px;
+
+			p {
+				margin: 0 0 25px;
+			}
+		}
+	}
+}

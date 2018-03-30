@@ -1,0 +1,37 @@
+/* block quotation styles */
+.block-quotation {
+	padding: 15px 10px;
+	color: $white;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+	background: $primary-color;
+	margin: 40px 0;
+
+	&.no-bottom {
+		margin-bottom: 0;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba($primary-color, .69);
+		z-index: -1;
+	}
+
+	img {
+		opacity: .52;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding: $global-xs-space 15px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding: $global-sm-space 25px;
+	}
+}

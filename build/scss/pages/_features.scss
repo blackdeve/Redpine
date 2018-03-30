@@ -1,0 +1,7 @@
+/* shorcode page styles */
+.show-grid [class^="col-"] {
+	background-color: rgba($primary-color, 0.15);
+	border: 1px solid darken($primary-color, 5);
+	padding-bottom: 10px;
+	padding-top: 10px;
+}

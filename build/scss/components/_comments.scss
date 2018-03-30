@@ -1,0 +1,189 @@
+/* comments styles */
+.comment-slot {
+	&.v-middle {
+		.thumb ,
+		.text {
+			vertical-align: middle;
+		}
+	}
+
+	.thumb {
+		display: inline-block;
+		vertical-align: top;
+		width: 50px;
+		margin-right: 15px;
+		overflow: hidden;
+		border-radius: 50px;
+
+		img {
+			border-radius: 100%;
+		}
+	}
+
+	.name {
+		display: block;
+		font-size: 1.143em;
+		font-family: $montserrat;
+
+		a {
+			color: $link-color;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	.text {
+		display: inline-block;
+		vertical-align: middle;
+		width: calc(100% - 70px);
+	}
+}
+
+/* main comment styles */
+.comments {
+	padding: $global-xs-space 15px;
+	border: 1px solid $desert-storm;
+	box-shadow: 0 0 1px 1px rgba(1, 2, 2, 0.1);
+
+	.comment-head {
+		overflow: hidden;
+		margin: 0 0 15px;
+
+		.left {
+			float: left;
+			width: 50%;
+			padding-right: 10px;
+		}
+
+		.meta {
+			font-style: italic;
+		}
+
+		.name {
+			display: block;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+
+		.right {
+			width: 50%;
+			text-align: right;
+			float: left;
+			padding-top: 5px;
+		}
+	}
+
+	p {
+		margin: 0 0 $global-xs-space;
+	}
+
+	&.reply {
+		padding: 0;
+		box-shadow: none;
+		border: 0;
+		padding: 40px 0 0 100px;
+
+		.comment-slot {
+			.comment-detail {
+				max-width: 570px;
+			}
+		}
+	}
+
+	.comment-slot {
+		overflow: hidden;
+		border-bottom: 0;
+		padding: 20px 0 15px;
+
+		&:hover {
+		}
+		.text {
+			&:hover {
+				a {
+					color: $primary-color;
+				}
+
+				.star-rating {
+					color: $primary-color;
+				}
+			}
+		}
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		.thumb {
+			width: 75px;
+			padding-right: 20px;
+			margin-right: 0;
+			margin-top: 10px;
+		}
+
+		.text {
+			width: calc(100% - 80px);
+		}
+
+		.comment-detail {
+			max-width: 670px;
+			border-bottom: 1px solid $platinum;
+			padding: 0 20px $global-xs-space 0;
+		}
+	}
+
+	.link-holder {
+		font-style: italic;
+
+		a{
+			color: $link-color;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	.comment-holder {
+		margin: 0 0 20px;
+	}
+
+	.link-more {
+		font-size: 1.143em;
+		font-weight: 700;
+		padding-top: 2px;
+		margin-left: $thumb + $reply-padding-left;
+
+		a{
+			color: $link-color;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	@include breakpoint-max($screen-xs - 1) {
+		&.reply {
+			padding-left: 0;
+		}
+
+		.comment-slot {
+			.thumb {
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			.text {
+				display: block;
+				width: auto;
+			}
+		}
+
+		.link-more {
+			margin-left: 0;
+			
+		}
+	}
+}

@@ -1,0 +1,30 @@
+/* subscribe form styles */
+.subscribe-form {
+	.form-control {
+		border: 0;
+		background: $desert-storm;
+		box-shadow: none;
+		font-size: 14px;
+		height: 30px;
+		border-radius: 0;
+		font-weight: 400;
+
+		&::-webkit-input-placeholder {color: $gray;}
+		&:-moz-placeholder           {color: $gray;}
+		&::-moz-placeholder          {color: $gray;}
+		&:-ms-input-placeholder      {color: $gray;}
+
+		&:focus {
+			background: darken($desert-storm, 5%)
+		}
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		font-size: 14px;
+		min-width: 110px;
+	}
+}

@@ -1,0 +1,25 @@
+/* star rating styles */
+.star-rating {
+	@extend %listreset;
+
+	> span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: -2px;
+
+		&:hover {
+			cursor: pointer;
+			color: $primary-color;
+		}
+	}
+
+	[class^="icon-"], 
+	[class*=" icon-"] {
+		font-size: 15px;
+		line-height: 1em;
+	}
+
+	.disable {
+		color: $silver-chalice;
+	}
+}

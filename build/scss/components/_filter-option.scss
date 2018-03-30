@@ -1,0 +1,203 @@
+/* filter option styles */
+.filter-option {
+	@extend %clearfix;
+	position: relative;
+	max-width: 470px;
+	margin: 0 auto;
+
+	.btn-filter {
+		margin: 0 15px;
+		border-width: 2px;
+		line-height: 40px;
+		padding: 0 10px;
+
+		i {
+			font-size: 25px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			margin-top: -2px;
+		}
+	}
+
+	.select-col.sidebar-filter-opener {
+		display: none;
+
+		@include breakpoint-max($screen-sm - 1) {
+			display: inline-block;
+			width: 54px;
+			margin-left: 10px;
+			text-align: center;
+			font-size: 17px;
+
+			a {
+				display: block;
+				border: 2px solid $scarpa-flow;
+				height: 34px;
+				width: 34px;
+			}
+		}
+	}
+
+	.filter-slide {
+		max-height: 0;
+		transition: all linear .3s;
+		overflow: hidden;
+		width: calc(100% + 130px);
+		margin-bottom: -10px;
+		padding-top: 10px;
+
+		.select-col {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+
+	&.filter-box {
+		background: $white;
+		padding: 15px 25px 5px 20px;
+
+		@include breakpoint-max($screen-sm - 1) {
+			padding: 10px;
+		}
+
+		.select-holder {
+			text-align: right;
+		}
+
+		.result-info {
+			padding-top: 5px;
+		}
+
+		.link {
+			width: 34px;
+			height: 34px;
+			font-size: 18px;
+			line-height: 34px;
+			margin-left: 15px;
+		}
+
+		.select-holder {
+			width: calc(100% - 77px);
+			text-align: left;
+
+			@include breakpoint-max($screen-sm - 1) {
+				width: calc(100% - 86px);
+			}
+		}
+	}
+
+	.result-info {
+		font-size: 1.143em;
+		line-height: 1.5em;
+		padding-top: 10px;
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.select-col {
+		padding: 0 15px 10px;
+		width: 180px;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: -.25em;
+
+		@include breakpoint-max($screen-sm - 1) {
+			padding: 0 15px 10px;
+		}
+	}
+
+	.select-holder {
+		float: left;
+		width: calc(100% - 100px);
+		margin: 0 -15px;
+	}
+
+	.layout-action {
+		float: right;
+		max-width: 140px;
+	}
+
+	.link {
+		display: inline-block;
+		vertical-align: top;
+		height: 44px;
+		width: 44px;
+		border: 2px solid $platinum;
+		line-height: 44px;
+		text-align: center;
+		color: $platinum;
+		margin: 0 -.25em 0 19px;
+		font-size: 25px;
+		transition: all .3s linear;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.active , 
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		max-width: none;
+		
+		.btn-filter {
+			display: none;
+		}
+
+		.filter-slide {
+			position: static;
+			background: none;
+			max-height: none;
+			width: auto;
+			padding-top: 0;
+
+			.select-col {
+				margin-top: 0;
+				width: 200px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-lg) {
+		&.filter-box {
+			.result-info {
+				max-width: 45%;
+			}
+
+			.select-col {
+				width: 200px;
+			}
+		}
+		
+		.result-info {
+			float: left;
+			max-width: 40%;
+			margin-bottom: 0;
+		}
+
+		.layout-holder {
+			float: right;
+			width: 60%;
+		}
+
+		&.filter-box {
+			.layout-holder {
+				width: 55%;
+			}
+
+			.select-holder {
+				text-align: right;
+			}
+		}
+	}
+}
+
+.filter-active {
+	.filter-slide {
+		max-height: 350px;
+	}
+}

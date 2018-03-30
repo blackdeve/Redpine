@@ -1,0 +1,126 @@
+/* count block styles */
+.count-block {
+	color: $white;
+	text-align: center;
+
+	.icon{
+		display: block;
+		margin: 0 auto 15px;
+		position: relative;
+		top: 0;
+		transition: top 0.2s linear;
+		font-size: 50px;
+
+		&.icon-duration {
+			font-size: 38px;
+			height: 50px;
+		}
+	}
+
+	.info,
+	.txt{
+		display: block;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+
+	.txt {
+		margin: 0;
+		display: block;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+	.info{
+		font-size: 1.667em;
+		font-weight: 700;
+		font-family: $montserrat;
+		margin-bottom: 10px;
+	}
+
+	.block-1 {
+		background: $block-1;
+	}
+
+	.block-2 {
+		background: $block-2;
+	}
+
+	.block-3 {
+		background: $block-3;
+	}
+
+	.block-4 {
+		background: $block-4;
+	}
+
+	.holder {
+		padding: $global-sm-space 10px;
+		font-size: 1.286em;
+		text-align: center;
+
+		&:hover {
+			.icon {
+				top: -15px;
+			}
+		}
+	}
+
+	.wpb_wrapper {
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;
+	}
+
+	@include breakpoint-max ($screen-mobile - 1) {
+		[class^="col-"],
+		[class*=" col-"]  {
+			width: 100%;
+		}
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		.holder {
+			font-size: 1em;
+			padding: $global-md-space 10px;
+		}
+
+		.icon {
+			margin-bottom:25px;
+		}
+
+		.info {
+			font-size: 2em;
+			margin-bottom: 15px;
+		}
+
+		.txt {
+			font-size: 1em;
+			text-transform: uppercase;
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		.txt {
+			letter-spacing: 2px;
+		}
+	}
+
+	@include breakpoint-min ($screen-lg) {
+		.info {
+			font-size: 2.857em;
+		}
+
+		.txt {
+			font-size: 1.286em;
+			letter-spacing: 4px;
+		}
+	}
+
+	@include breakpoint-min ($large-screen) {
+		.holder {
+			padding: $global-space 10px;
+		}
+	}
+}

@@ -1,0 +1,26 @@
+/* language dropdown styles */
+.lang-wrap {
+	.lang-row {
+		overflow: hidden;	}
+
+	.lang-col {
+		padding: 2px;
+	}
+
+	a {
+		display: block;
+		padding: 2px 5px;
+
+		.text {
+			color: $gray;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.01em;
+			margin-left: 5px;
+		}
+
+		&:hover {
+			background: darken($shark, 5%);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+/* demo font wrapper styles */
+.font-demo-wrapper {
+	font-size: 24px;
+
+	.glyph.fs1 {
+		padding: 0 10px;
+		margin-bottom: 20px;
+	}
+
+	.mls {
+		font-size: 18px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	[class^="icon-"], 
+	[class*=" icon-"] {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		.glyph.fs1 {
+			display: inline-block;
+			vertical-align: top;
+			width: 49%;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.glyph.fs1 {
+			width: 32%;
+		}
+	}
+}

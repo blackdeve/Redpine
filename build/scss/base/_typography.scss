@@ -1,0 +1,264 @@
+// import link for google font
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,100italic,100,400italic,500,500italic,700,700italic,900,900italic);
+
+// create font variable
+$roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$montserrat: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-base: $roboto; // global font family
+$base-font-size: 1.4em;  // global font size
+$line-height-base: 1.71428571; // global line height
+$navigation-font-family: $montserrat;
+
+/* typography */
+body {
+	font: #{$base-font-size}/#{$line-height-base} $font-family-base;
+}
+
+h1 ,
+h2 ,
+h3 ,
+.h3 ,
+h4 {
+	font-family: $montserrat;
+	color: $heading-color;
+	margin: 0 0 15px;
+}
+
+h1 {
+	font-size: 2.571428em;
+
+	@include breakpoint-min ($screen-sm) {
+		font-size: 2.857142em;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		font-size: 3.428571em;
+	}
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 1.2857em;
+	letter-spacing: 1px;
+
+	@include breakpoint-min ($screen-sm) {
+		font-size: 1.714em;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		font-size: 2.143em;
+		margin-bottom: 34px;
+	}
+}
+
+h3 ,
+.h3 {
+	font-size: 1.142857em;
+	font-weight: normal;
+	
+	@include breakpoint-min ($screen-md) {
+		font-size: 1.2857em;
+	}
+}
+
+h2.title-heading,
+h3.title-heading {
+	font-weight: 400;
+	letter-spacing: 0.02em;
+}
+
+h2.intro-heading,
+h3.intro-heading {
+	font-size: 1.71428em;
+	letter-spacing: 0;
+	font-weight: 400;
+	margin-bottom: 15px;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.857142em;
+		margin-bottom: 25px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		font-size: 2.142857em;
+		margin-bottom: 35px;
+	}
+}
+
+h1.small-size {
+	font-size: 1.71428em;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 2.143em;
+	}
+}
+
+h2.small-space,
+h3.small-space {
+	margin-bottom: 5px;
+}
+
+h2.no-space,
+h3.no-space {
+	margin-bottom: 0;
+}
+
+h2.small-size {
+	font-size: 1.143em;
+	line-height: 1.2;
+}
+
+h1.content-main-heading,
+h2.content-main-heading {
+	font-size: 1.714285em;
+	letter-spacing: 1px;
+	margin: 0 0 30px;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 2.142857em;
+	}
+
+	@include breakpoint-min($screen-md) {
+		font-size: 2.571428em;
+	}
+}
+
+p.intro {
+	font-size: 1em;
+	margin-bottom: 35px;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.286em;
+		line-height: 2;
+	}
+}
+
+p.special-text {
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+	letter-spacing: 0.035em;
+	margin: 0;
+
+	strong {
+		font-weight: 700;
+		font-family: $montserrat;
+	}
+
+	a {
+		color: $white;
+		display: inline-block;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 2em;
+	}
+
+	@include breakpoint-min($screen-md) {
+		font-size: 2.571em;
+	}
+}
+
+blockquote {
+	border: none;
+	font-size: 1.428571em;
+	line-height: 1.2;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	quotes: none;
+
+	cite {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: $montserrat;
+		font-weight: 700;
+		font-style: normal;
+	}
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.7857em;
+
+		cite {
+			letter-spacing: 1px;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		font-size: 2.1428em;
+	}
+}
+
+blockquote.testimonial-quote {
+	font-style: normal;
+	font-size: 1em;
+	line-height: 1.6;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.286em;
+		line-height: 2;
+	}
+}
+
+blockquote.normal {
+	font-size: 1.28571em;
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.857142em;
+	}
+
+	@include breakpoint-min($screen-md) {
+		font-size: 2.142857em;
+	}
+}
+
+.main-heading {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.main-subtitle {
+	font-size: 1.371428em;
+	line-height: 1.25;
+	font-weight: 300;
+	font-style: italic;
+	letter-spacing: 0.04em;
+
+	@include breakpoint-min ($screen-sm) {
+		font-size: 1.857142em;
+	}
+	
+	@include breakpoint-min ($screen-md) {
+		font-size: 2.142857em;
+	}
+}
+
+.content-title {
+	display: block;
+	font-size: 1.143em;
+	margin: 0 0 10px;
+	text-transform: capitalize;
+	font-family: $montserrat;
+	font-weight: 400;
+}
+
+.info-title {
+	font-size: 1em;
+	font-style: italic;
+	font-weight: normal;
+}
+
+.inner-main-heading {
+	font-size: 2.571em;
+	line-height: 1.2;
+	font-weight: normal;
+	text-transform: capitalize;
+
+	@include breakpoint-min($screen-md) {
+		font-size: 3.439em;
+	}
+}

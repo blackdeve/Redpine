@@ -1,0 +1,26 @@
+/* global seperator styles */
+.seperator {
+	border-bottom: 1px solid $quaternary-color;
+	position: relative;
+	padding-bottom: $global-xs-space;
+
+	&:before {
+		@include translate(-50%, 0);
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 120px;
+		height: 4px;
+		background: $quaternary-color;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		padding-bottom: $global-sm-space;
+
+		&:before {
+			height: 8px;
+			width: 170px;
+		}
+	}
+}

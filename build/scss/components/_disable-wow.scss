@@ -1,0 +1,13 @@
+// disable animation on mobile devices
+.wow {
+	@include breakpoint-max($screen-md - 1 ) {
+		visibility: visible !important;
+		animation: none !important;
+	}
+}
+
+.animated {
+	@include breakpoint-max($screen-md - 1) {
+		transition: none !important;
+	}
+}

@@ -1,0 +1,37 @@
+/* styles for review blocks */
+.reviews-slot {
+	&.v-middle {
+		.thumb ,
+		.text {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.thumb {
+			width: 75px;
+		}
+
+		.text {
+			width: calc(100% - 82px);
+			letter-spacing: .04em;
+		}
+	}
+
+	.name {
+		a {
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+.reviews-body {
+	background: $desert-storm;
+
+	.comment-slot {
+		border-bottom: 1px solid rgba($gray, .15);
+		padding-bottom: $global-xs-space;
+		padding-top: $global-xs-space;
+	}
+}

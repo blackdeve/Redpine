@@ -1,0 +1,142 @@
+/* datetime picker */
+.dropdown-menu.datepicker-dropdown {
+	visibility: visible;
+	opacity: 1;
+	transform: rotate(0);
+	position: absolute;
+	background: $shark;
+	color: $white;
+	border-radius: 0;
+	width: 250px;
+	padding: 5px;
+
+	table {
+		width: 100%;
+	}
+}
+
+.datepicker-dropdown.dropdown-menu.datepicker-orient-bottom:before,
+.datepicker-dropdown.dropdown-menu.datepicker-orient-bottom:after {
+	border-bottom-color: $shark;
+}
+
+.datepicker-dropdown.dropdown-menu.datepicker-orient-top:before,
+.datepicker-dropdown.dropdown-menu.datepicker-orient-top:after {
+	border-top-color: $shark;
+}
+
+.datepicker-dropdown.dropdown-menu.datepicker-orient-bottom:after {
+	border-bottom-color: $shark;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td span:hover, 
+.datepicker table tr td.day.focused {
+	background: $primary-color;
+}
+
+.datepicker table tr td.today, 
+.datepicker table tr td.today.disabled, 
+.datepicker table tr td.today.disabled:hover {
+	background: darken($primary-color, 10%);
+}
+
+.datepicker .datepicker-switch:hover, 
+.datepicker .prev:hover, 
+.datepicker .next:hover, 
+.datepicker tfoot tr th:hover {
+	background: $primary-color;
+}
+
+.datepicker table tr td.day.focused,
+.datepicker table tr td span.focused {
+	background: lighten($primary-color, 10%);
+	color: $shark;
+}
+
+
+.datepicker table tr td.day:hover, .datepicker table tr td span:hover, .datepicker table tr td.day.focused {}
+
+.datepicker table tr td.old:hover,
+.datepicker table tr td span.new:hover,
+.datepicker table tr td span.old:hover,
+.datepicker table tr td.new:hover {
+	background: none;
+}
+
+.datepicker table tr td.active:hover, 
+.datepicker table tr td.active:hover:hover, 
+.datepicker table tr td.active.disabled:hover, 
+.datepicker table tr td.active.disabled:hover:hover, 
+.datepicker table tr td.active:active, 
+.datepicker table tr td.active:hover:active, 
+.datepicker table tr td.active.disabled:active, 
+.datepicker table tr td.active.disabled:hover:active, 
+.datepicker table tr td.active.active, 
+.datepicker table tr td.active:hover.active, 
+.datepicker table tr td.active.disabled.active, 
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled, 
+.datepicker table tr td.active:hover.disabled, 
+.datepicker table tr td.active.disabled.disabled, 
+.datepicker table tr td.active.disabled:hover.disabled, 
+.datepicker table tr td.active[disabled], 
+.datepicker table tr td.active:hover[disabled], 
+.datepicker table tr td.active.disabled[disabled], 
+.datepicker table tr td.active.disabled:hover[disabled],
+.datepicker table tr td span.active:hover, 
+.datepicker table tr td span.active:hover:hover, 
+.datepicker table tr td span.active.disabled:hover, 
+.datepicker table tr td span.active.disabled:hover:hover, 
+.datepicker table tr td span.active:active, 
+.datepicker table tr td span.active:hover:active, 
+.datepicker table tr td span.active.disabled:active, 
+.datepicker table tr td span.active.disabled:hover:active, 
+.datepicker table tr td span.active.active, 
+.datepicker table tr td span.active:hover.active, 
+.datepicker table tr td span.active.disabled.active, 
+.datepicker table tr td span.active.disabled:hover.active, 
+.datepicker table tr td span.active.disabled, 
+.datepicker table tr td span.active:hover.disabled, 
+.datepicker table tr td span.active.disabled.disabled, 
+.datepicker table tr td span.active.disabled:hover.disabled, 
+.datepicker table tr td span.active[disabled], 
+.datepicker table tr td span.active:hover[disabled], 
+.datepicker table tr td span.active.disabled[disabled], 
+.datepicker table tr td span.active.disabled:hover[disabled] {
+	background: $secondary-color;
+	color: $white;
+}
+
+.input-group.date {
+	max-width: 400px;
+
+	.form-control {
+		margin: 0;
+		border: 1px solid #ccc;
+	}
+}
+
+.trip-form {
+	.input-group.date {
+		background: $trip-select-bg;
+		border-radius: 4px;
+
+		input {
+			background: none;
+			border: 0;
+			font-size: 14px;
+			line-height: 24px;
+			font-style: normal;
+			color: $trip-select-color;
+			font-weight: 700;
+		}
+
+		.input-group-addon {
+			background: darken($trip-select-bg, 5%);
+			border-color: darken($trip-select-bg, 5%);
+			border-radius: 0 4px 4px 0;
+			color: $trip-select-color;
+		}
+	}
+}

@@ -1,0 +1,135 @@
+//import colors
+@import '../base/colors';
+
+ // default colors
+$neutral-color: $shark;
+$primary-color: $puerto-rico;
+$secondary-color: $jungle-green;
+$teritory-color: $desert-storm;
+$quaternary-color: $platinum;
+
+// heading color
+$heading-color: $black;
+
+// navigation hover color 
+$nav-hover-color: $primary-color;
+
+// header divider color
+$header-border-color: $heavy-metal;
+
+// dropdown nav hover color
+$dropdown-nav-hover-color: $secondary-color;
+
+// revolution slider button style
+$rev-button-border-color: $primary-color;
+$rev-button-border-hover-color: $secondary-color;
+$rev-button-bg-color: none;
+$rev-button-bg-hover-color: $secondary-color;
+$rev-button-text-color: $primary-color;
+$rev-button-text-hover-color: $white;
+
+// global button color
+$button-bg: $neutral-color;
+$button-hover-bg: none;
+$button-link-color: $white;
+$button-link-hover-color: $white;
+$border-default-hover-color: $primary-color;
+
+// info button sub color
+$button-info-sub-bg: $primary-color;
+$button-info-sub-bg-hover: $secondary-color;
+$button-info-sub-border-hover: $secondary-color;
+$button-info-sub-color: $white;
+$button-info-sub-hover-color: $white;
+
+// info button color
+$button-info-bg: $primary-color;
+$button-info-bg-hover: $secondary-color;
+$button-info-border-hover: $secondary-color;
+$button-info-color: $white;
+$button-info-hover-color: $white;
+
+// banner button color
+$button-banner-border-color: $puerto-rico;
+$button-banner-bg-hover-color: $puerto-rico;
+
+// article link color
+$article-link-hover-color: $secondary-color;
+$thumbnail-link-hover-color: $secondary-color;
+
+// list price color
+$list-price-color: $black;
+
+// pagination styles
+$pagination-active-bg: $scarpa-flow;
+
+// banner and revolution slider heading and text colors
+$banner-heading-color: $white;
+$banner-heading-sub-color: $primary-color;
+$revolution-text-color: $primary-color;
+
+// iconbar link hover
+$iconbar-link-hover-color: $primary-color;
+
+// home search form bg
+$trip-background: rgba($primary-color, .61);
+$trip-form-color: $white;
+$trip-border: $trip-background;
+$trip-select-color: $white;
+$trip-select-bg: $trip-background;
+$btn-trip-bg: $trip-background;
+$btn-trip-color: $white;
+$trip-shadow: 0 2px 2px rgba($primary-color, 0.75);
+
+// special block
+$special-block: $shark;
+$special-block-border-color: lighten($shark, 5%);
+
+// browse block
+$browse-block-1: $primary-color;
+$browse-block-2: $secondary-color;
+
+// count block
+$block-1: $primary-color;
+$block-2: $secondary-color;
+$block-3: #02ABB0;
+$block-4: $puerto-rico;
+
+// hover text color for guides
+$guide-text-hover-color: $white;
+
+// guide caption background
+$guide-caption-bg: $outer-space;
+$guide-caption-hover-bg: $secondary-color;
+
+// map holder of list view with detail page
+$listview-mapbg: $secondary-color;
+
+// trip info of tour detail page
+$trip-info-bg: $teritory-color;
+
+// tab link of tour detail page
+$tab-link-active-color: $primary-color;
+$tab-link-color: $gray;
+
+// error page background
+$error-page-bg: $scarpa-flow;
+
+// progress bar color for about page
+$progress-bar-color: $primary-color;
+
+// partner block border color
+$partner-border-color: $secondary-color;
+
+// social icon color of footer
+$social-wrap-color: $gray;
+
+// footer newsletter form and footer nav title
+$newsletter-color: $scarpa-flow;
+$footer-nav-title-color: $gray;
+
+// hover listing s3
+$listing-star-rating-color: $white;
+$listing-star-rating-disabled-color: $gray;
+$listing-star-rating-hover-color: $secondary-color;
+$listing-caption-color: $gray;

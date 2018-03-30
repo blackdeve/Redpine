@@ -1,0 +1,51 @@
+/* boxed layout styles */
+.boxed-layout {
+	background: $kokoda;
+
+	&.bg-pattern {
+		background: url("../img/retina_wood.png");
+	}
+
+	&.bg-image {
+		background: url("../img/banner/img-15.jpg") no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	#wrapper {
+		background: $white;
+	}
+
+	#wrapper {
+		max-width: 1230px;
+		margin: 0 auto;
+	}
+
+	#header {
+		max-width: 1230px;
+		margin: 0 auto;
+		width: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	&.search-active {
+		.search-wrap {
+			max-width: 1232px;
+			margin: 0 auto;
+		}
+	}
+
+	.has-mega-dropdown {
+		.dropdown-menu {
+			left: 10px;
+			right: 10px;
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		.logo {
+			width: 180px;
+		}
+	}
+}

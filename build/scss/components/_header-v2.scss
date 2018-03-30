@@ -1,0 +1,46 @@
+/* header v1 styles */
+.header-v2 {
+	.logo {
+		border-right: 0;
+	}
+
+	@include breakpoint-min($screen-md) {
+		.navbar-default {
+			.navbar-nav {
+				float: left;
+			}
+			
+			.navbar-right {
+				float: right;
+			}
+
+			.nav-center {
+				width: calc(100% - 340px);
+				text-align: center;
+
+				> li {
+					float: none;
+					display: inline-block;
+				}
+			}
+		}
+
+		.navbar-nav {
+			.has-mega-dropdown.mega-md {
+				.dropdown-menu {
+					right: 20%;
+					left: 20%;
+					width: auto;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-lg) {
+		.navbar-default {
+			.nav-center {
+				width: calc(100% - 430px);
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+/* image slider styles */
+.image-slide {
+	position: relative;
+	height: 100%;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	.controls {
+		position: absolute;
+		bottom:0;
+		z-index: 9;
+		right: 0;
+
+		a{
+			background: $primary-color;
+			color: $white;
+			width: 50px;
+			height: 50px;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+			font-size: 14px;
+			transition: background linear .3s;
+
+			&:hover {
+				background: lighten($primary-color, 10%);
+			}
+
+			&.btn-prev {
+				@include rotate(90deg);
+			}
+
+			&.btn-next {
+				@include rotate(-90deg);
+			}
+		}
+	}
+
+	.slide {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		top: 0;
+
+		&.active {
+			z-index: 2;
+		}
+	}
+
+	@include breakpoint-max($screen-sm - 1) {
+		margin-right: -15px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		height: calc(100% - 81px);
+
+		.slide {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+.image-slide.not-enough-slides a.btn-prev,
+.image-slide.not-enough-slides a.btn-next {
+	visibility: hidden;
+}

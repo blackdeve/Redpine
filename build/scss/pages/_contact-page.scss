@@ -1,0 +1,208 @@
+/* map col styles */
+.map-col-main {
+	margin-top: 40px;
+
+	@include breakpoint-min($screen-md) {
+		margin-top: 0;
+	}
+}
+
+.contact-info {
+	margin-top: $global-sm-space;
+	margin-bottom: $global-sm-space;
+
+	.col-sm-4 {
+		margin-bottom: $global-xs-space;
+	}
+
+	.tel {
+		padding: 20px 5px;
+		display: block;
+		background: $neutral-color;
+		text-align: center;
+		font-size: 24px;
+		line-height: 62px;
+		font-weight: 700;
+		letter-spacing: 2px;
+		height: 118px;
+		margin-bottom: 20px;
+		font-family: $montserrat;
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			font-size: 30px;
+			color: $white;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		a {
+			color: $white;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&.bg-blue {
+			background: $secondary-color;
+		}
+	}
+
+	h3 {
+		color: $text-color;
+	}
+
+	@include breakpoint-max($screen-md - 1) {
+		.tel {
+			font-size: 18px;
+
+			[class^="icon-"],
+			[class*=" icon-"] {
+				font-size: 25px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		margin-top: $global-md-space;
+		margin-bottom: $global-md-space;
+	}
+
+	@include breakpoint-min($screen-md) {
+		margin-top: $global-space;
+		margin-bottom: 104px;
+
+		.col-sm-4 {
+			margin-bottom: 0;
+		}
+	}
+
+	@include breakpoint-min($screen-lg) {
+		.tel {
+			margin-bottom: 43px;
+		}
+
+		[class^="icon-"],
+		[class*=" icon-"] {
+			margin: 0 10px;
+		}
+	}
+
+	@include breakpoint-max($screen-sm - 1) {
+		.tel {
+			line-height: 32px;
+			height: 72px;
+			padding: 12px 10px;
+
+			[class^="icon-"],
+			[class*=" icon-"] {
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint-max($screen-xs - 1) {
+		margin-bottom: 20px;
+	}
+}
+
+/* contact form styles */
+.contact-form {
+	background: $desert-storm;
+	color: $scarpa-flow;
+	padding: 15px;
+	letter-spacing: 0.04em;
+	margin-bottom: 16px;
+
+	.form-group {
+		@extend %clearfix;
+		margin-bottom: 20px;
+	}
+
+	.form-title {
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		padding-top: 13px;
+		text-transform: capitalize;
+
+		@include breakpoint-min($screen-sm) {
+			text-align: right;
+		}
+	}
+
+	.form-control {
+		background: transparent;
+		border-width: 0 0 1px;
+		border-color: $silver-chalice;
+		border-style: solid;
+		outline: none;
+		box-shadow: none;
+		color: $scarpa-flow;
+		height: 31px;
+		width: 100%;
+		padding: 4px 0;
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	textarea {
+		&.form-control {
+			resize: none;
+			height: 115px;
+			width: 100% !important;  // to control resizing of textarea
+			min-height: 115px !important;  // to control resizing of textarea
+		}
+	}
+
+	[type="submit"].btn {
+		background: transparent;
+		width: 100%;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		padding: 14px 10px;
+		border-color: $primary-color;
+		color: $scarpa-flow;
+		min-width: 1px;
+
+		&:hover {
+			background: $primary-color;
+			color: $white;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding: 60px 80px 60px 30px;
+
+		.btn-holder {
+			padding-top: $global-xs-space;
+		}
+	}
+}
+
+.map-holder {
+	min-height: 320px;
+
+	iframe {
+		width: 100%;
+		border: 0;
+	}
+
+	@include breakpoint-max($screen-sm - 1) {
+		iframe {
+			height: 360px;
+		}
+	}
+}
+
+.contact-confirmation {
+	color: $secondary-color;
+	padding: 20px 0;
+}
+
+.error {
+	color: $secondary-color;
+	padding: 5px 0;
+}

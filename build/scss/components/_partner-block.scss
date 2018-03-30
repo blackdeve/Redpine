@@ -1,0 +1,72 @@
+/* partner block styles */
+.partner-block {
+	padding: $global-md-space 0;
+	text-align: center;
+	background: $teritory-color;
+
+	.partner {
+		margin-top: $global-sm-space;
+		padding: 0 15px;
+		padding-bottom: 1px;
+	}
+
+	a{
+		display: block;
+		height: 100%;
+		border-bottom: 1px solid $gainsboro;
+		padding-bottom: $global-sm-space;
+		position: relative;
+		min-height: 117px;
+
+		&:before {
+			content: '';
+			background: $partner-border-color;
+			left: 50%;
+			bottom: -1px;
+			width: 0;
+			height: 1px;
+			position: absolute;
+			transition: width 0.2s linear, left 0.2s linear;
+		}
+
+		.hover {
+			display: none;
+		}
+
+		img {
+			transition: opacity .2s linear;
+			display: inline-block;
+		}
+
+		&:hover {
+			img {
+				display: none;
+
+				&.hover {
+					display: inline-block;
+				}
+			}
+
+			&:before {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding: $global-space 0;
+
+		.partner {
+			margin-top: $global-md-space;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding: $global-top-space 0 $global-bottom-space;
+
+		.partner {
+			margin-top: $global-space;
+		}
+	}
+}

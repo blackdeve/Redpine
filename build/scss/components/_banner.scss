@@ -1,0 +1,410 @@
+/* banner styles */
+.banner {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	background-position: 50% 0;
+
+	&.banner-slider {
+		background-position: 0 0;
+		min-height: 1px;
+
+		.trip-form {
+			white-space: normal;
+
+			.holder {
+				margin-bottom: 10px !important;
+			}
+		}
+
+		.solid-border {
+			overflow: visible;
+			border-radius: 0;
+		}
+
+		.banner-text {
+			width: 1170px;
+			position: static;
+			font-size: 14px;
+
+			@include breakpoint-max($large-screen - 1) {
+				width: 1000px;
+			}
+
+			@include breakpoint-max($desktop-screen - 1) {
+				width: 950px;
+			}
+			@include breakpoint-max($screen-md - 1) {
+				width: 520px;
+			}
+
+			@include breakpoint-max($screen-mobile - 1) {
+				width: 300px;
+			}
+		}
+	}
+
+	.banner-video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		background: url('../videos/video-thumb.jpg') no-repeat;
+		background-size: cover;
+		background-position: 50% 50%;
+
+		&.has-overlay {
+			&:before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				content: "";
+				background-color:rgba(51, 51, 51, 0.7);
+			}
+		}
+
+		video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			max-width: none;
+			transform: translateX(-50%) translateY(-50%);
+			transition: 1s opacity;
+		}
+	}
+
+	&.banner-inner{
+		height: 100vh;
+		min-height: 320px;
+		max-height: 500px;
+		padding-top: 0;
+		color: $white;
+
+		.banner-image {
+			height: 100%;
+		}
+
+		.img-holder {
+			float: left;
+			position: relative;
+			min-width: 1920px;
+			width: 100%;
+			height: auto;
+			left: 50%;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: -9999px;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: rgba($black, .25)
+			}
+
+			img{
+				width: 100%;
+				position: relative;
+				left: -50%;
+				width: 100%;
+			}
+		}
+
+		.banner-text {
+			text-align: left;
+			top: auto;
+
+			.center-text {
+				padding: 0;
+			}
+		}
+
+		.subtitle {
+			display: block;
+			font-size: 1.428571em;
+			line-height: 1.1;
+			font-style: italic;
+			margin-bottom: 70px;
+			font-weight: 400;
+		}
+
+		h1{
+			line-height: 1.2;
+			margin-bottom: 15px;
+			color: $white;
+		}
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		min-height: 600px;
+
+		&.banner-inner {
+			.subtitle {
+				font-size: 1.571428em;
+			}
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		&.banner-inner {
+			height: 666px;
+
+			.subtitle {
+				font-size: 1.714285em;
+			}
+		}
+	}
+}
+
+.banner-inner .banner-text {
+	h1 {
+		font-weight: 400;
+	}
+}
+
+#slider-wrapper {
+	position: relative;
+}
+
+/* banner image styles */
+.banner-image {
+	height: 100%;
+	min-height: 320px;
+	position: relative;
+
+	.has-overlay {
+		&:before {
+			background: rgba($black, .35);
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		max-height: none;
+		position: static;
+	}
+
+	@include breakpoint-min($screen-md) {
+		height: 100vh;
+	}
+}
+
+.banner {
+	&:hover {
+		.slick-arrow {
+			opacity: 1;
+		}
+	}
+}
+
+.banner-home {
+	.banner-text {
+		h1 {
+			font-size: 3.571em;
+
+			span{
+				display: block;
+				font-weight: 400;
+				font-size: .8em;
+				font-style: normal;
+			}
+		}
+
+		.subtitle {
+			font-size: 1.429em;
+			color: $banner-heading-sub-color;
+			font-weight: 300;
+			font-style: italic;
+			display: block;
+			margin-bottom: 25px;
+		}
+
+		@include breakpoint-min ($screen-md) {
+			h1 {
+				font-size: 5.143em;
+
+				span {
+					font-size: .72em;
+				}
+			}
+
+			.subtitle {
+				font-size: 1.714em;
+			}
+		}
+
+		@include breakpoint-min (1600px) {
+			h1 {
+				font-size: 7.143em;
+
+				span {
+					font-size: .72em;
+				}
+			}
+
+			.subtitle {
+				font-size: 2.143em;
+			}
+		}
+	}
+}
+
+/* banner text styles */
+.banner-text {
+	position: absolute;
+	top: 70px;
+	bottom: 100px;
+	left: 0;
+	right: 0;
+	white-space: nowrap;
+	z-index: 22;
+	text-align: center;
+
+	h1 {
+		line-height: .9em;
+		color: $banner-heading-color;
+		font-weight: 700;
+		margin-bottom: 0;
+
+		span {
+			color: $banner-heading-sub-color;
+		}
+	}
+
+	&:after{
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		margin-right: -.25em;
+	}
+
+	.center-text{
+		display: inline-block;
+		vertical-align: middle;
+		white-space: normal;
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		bottom: 0;
+
+		.center-text {
+			margin: 5% 0;
+		}
+		
+		h1 {
+			margin-bottom: $global-xs-space;
+		}
+	}
+
+	@include breakpoint-min (1600px) {
+		h1 {
+			margin-bottom: $global-xs-space;
+		}
+	}
+}
+
+.banner-icon-search {
+	.banner-text {
+		h1 {
+			font-size: 3.571em;
+		}
+
+		.center-text {
+			margin-top: 0;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		.banner-text {
+			h1 {
+				font-size: 4.571em;
+			}
+		}
+	}
+
+	@include breakpoint-min (1600px) {
+		.banner-text {
+			h1 {
+				font-size: 5.571em;
+			}
+		}
+	}
+}
+
+.heading-home {
+	font: 700 3.571em/.9em $montserrat !important; // to override js property
+	color: $white;
+	margin-bottom: 0;
+	text-align: center;
+
+	span{
+		display: block;
+		font-weight: 400;
+		font-size: .8em;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		font-size: 7.143em !important; // to override js property
+		margin-bottom: $global-xs-space;
+
+		span {
+			font-size: .72em;
+		}
+	}
+}
+
+.banner-caption-s1,
+.banner-home .banner-caption-s1 {
+	.center-text {
+		max-width: 750px;
+		text-align: right;
+		font-family: $roboto;
+
+		h1 {
+			color: $primary-color;
+			font-style: italic;
+			font-family: $roboto;
+
+			span {
+				color: $white;
+				font-style: normal;
+				font-weight: 100;
+			}
+		}
+
+		.banner-subtitle {
+			font-weight: 300;
+			color: $white;
+			margin-top: 30px;
+		}
+
+		@include breakpoint-min($screen-sm) {
+			.banner-subtitle {
+				font-size: 1.714em;
+			}
+		}
+
+		@include breakpoint-min($screen-md) {
+			max-width: 940px;
+
+			.banner-subtitle {
+				font-size: 2.571em;
+			}
+		}
+
+		@include breakpoint-min($screen-lg) {
+			max-width: 1200px;
+		}
+	}
+}

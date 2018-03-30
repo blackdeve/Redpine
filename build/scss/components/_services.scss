@@ -1,0 +1,79 @@
+/* service block styles */
+.services-block {
+	position: relative;
+	padding: $global-md-space 0;
+
+	.ico-holder {
+		font-size: 40px;
+	}
+
+	&.has-bg {
+		color: $white;
+
+		.ico-article {
+			line-height: 24px;
+
+			.content-title,
+			a {
+				color: $white;
+				transition: color 0.3s;
+			}
+
+			.ico-holder {
+				transition: color 0.3s;
+			}
+
+			&:hover {
+				.content-title,
+				a {
+					color: $primary-color;
+				}
+
+				.ico-holder {
+					color: $primary-color;
+				}
+			}
+		}
+
+		.ico-holder {
+			min-height: 50px;
+		}
+
+		.title {
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+	}
+
+	.ico-article {
+		margin-top: $global-sm-space;
+	}
+
+	.row {
+		margin-top: -$global-sm-space;
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		padding: $global-space 0;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		padding: $global-top-space 0 $global-bottom-space;
+
+		.ico-article {
+			margin-top: $global-md-space;
+		}
+
+		.row {
+			margin-top: -$global-md-space;
+		}
+	}
+}
+
+.description-text {
+	margin-top: $global-sm-space;
+
+	@include breakpoint-min ($screen-sm) {
+		margin-top: $global-md-space;
+	}
+}

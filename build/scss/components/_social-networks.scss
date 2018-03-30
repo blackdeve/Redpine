@@ -1,0 +1,63 @@
+/* social network styles */
+.social-networks{
+	@extend %listreset;
+
+	li{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 5px;
+	}
+
+	a {
+		span {
+			transition: color 0.2s linear;
+		}
+
+		&.facebook {
+			&:hover {
+				color: $c-facebook;
+			}
+		}
+
+		&.twitter {
+			&:hover {
+				color: $c-twitter;
+			}
+		}
+
+		&.google {
+			&:hover {
+				color: $c-gplus;
+			}
+		}
+
+		&.pin {
+			&:hover {
+				color: $c-pin;
+			}
+		}
+	}
+	.icon-twitter {
+		&:hover {
+			color: $c-twitter;
+		}
+	}
+
+	.icon-facebook {
+		&:hover {
+			color: $c-facebook;
+		}
+	}
+
+	.icon-google-plus {
+		&:hover {
+			color: $c-gplus;
+		}
+	}
+
+	.icon-linkedin {
+		&:hover {
+			color: $c-linkedin;
+		}
+	}
+}

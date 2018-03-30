@@ -1,0 +1,107 @@
+/* special block styles */
+.special-block {
+	background: $special-block;
+	padding: $global-xs-space 0;
+	border: 20px solid $special-block-border-color;
+	color: $white;
+
+	.special-text {
+		text-align: center;
+
+		a {
+			color: $white;
+			display: inline-block;
+		}
+
+		@include breakpoint-min($screen-sm) {
+			font-size: 2em;
+		}
+
+		@include breakpoint-min($screen-md) {
+			font-size: 2.571em;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding: $global-sm-space 0;
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding: $global-md-space 0;
+	}
+}
+
+/* browse block styles */
+.browse-block {
+	overflow: hidden;
+	font-size: 1em;
+
+	a {
+		color: $white;
+		display: block;
+		height: auto;
+		transition: background 0.3s linear;
+
+		span {
+			display: block;
+			padding: 0 10px;
+			height: 100%;
+			line-height: 85px;
+		}
+	}
+
+	.column {
+		letter-spacing: 2px;
+		text-align: center;
+		overflow: hidden;
+
+		&.browse-destination {
+
+			a {
+				background: $browse-block-1;
+
+				&:hover {
+					background: darken( $browse-block-1, 10%);
+				}
+			}
+		}
+
+		&.browse-adventures {
+
+			a {
+				background: $browse-block-2;
+
+				&:hover {
+					background: darken( $browse-block-2, 10%);
+				}
+			}
+		}
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		font-size: 1.286em;
+
+		.column {
+			display: table-cell;
+			width: 50%;
+			letter-spacing: 4px;
+		}
+
+		a {
+			 span {
+			 	line-height: 120px;
+			 }
+		}
+	}
+	
+	@include breakpoint-min ($screen-md) {
+		a {
+			span {
+				line-height: 150px;
+			}
+		}		
+	}
+}

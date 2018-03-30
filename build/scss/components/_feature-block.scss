@@ -1,0 +1,122 @@
+/* feature block global styles */
+.feature-block {
+	background: $shark;
+	z-index: 99;
+	padding: 10px 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1em;
+	position: relative;
+
+	&.hover {
+		.swipe {
+			&.left {
+				opacity: 1;
+			}
+		}
+	}
+
+	.ico {
+		position: relative;
+		top: 0;
+		display: block;
+		margin: 0 auto 10px;
+		transition: top 0.2s linear;
+		font-size: 25px;
+		line-height: 1;
+	}
+
+	.info {
+		transition: color 0.2s linear;
+	}
+
+	.holder {
+		overflow-x: auto; /* 1 */
+		-webkit-overflow-scrolling: touch; /* 2 */
+	}
+
+	ul {
+		@extend %listreset;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -0.25em;
+		padding: 10px;
+		position: relative;
+		width: 12.5%;
+		font-family: $montserrat;
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -1px;
+			top: 0;
+			bottom: 0;
+			background: $black;
+			width: 1px;
+		}
+
+		a {
+			display: block;
+			height: 100%;
+			color: $gray;
+			
+			&:hover {
+				color: $iconbar-link-hover-color;
+
+				.ico {
+					top: -5px;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	@include breakpoint-min($large-screen) {
+		font-size: 1em;
+		padding: $global-xs-space 0 15px;
+
+		ul {
+			li {
+				padding: 20px 10px;
+			}
+		}
+
+		li {
+			a {
+				&:hover {
+					.ico {
+						top: -10px;
+					}
+				}
+			}
+		}
+
+		.ico {
+			font-size: 45px;
+		}
+	}
+
+	@include breakpoint-max($medium-screen - 1) {
+		ul {
+			min-width: 1210px;
+			overflow: visible;
+		}
+	}
+}

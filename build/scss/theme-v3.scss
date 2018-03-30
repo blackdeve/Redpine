@@ -1,0 +1,207 @@
+// SCSS IMPORTS 
+// ============
+/*
+Name: 			theme-v3
+Author: 		waituk - (http://www.waituk.net)
+Version: 		1.2.7
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. General styles and resets
+2. Header / #header
+3. Sidebar / .sidebar
+4. Parallax / .parallax
+5. Navigation / .navbar-nav
+6. Banner / .banner
+7. Feature block / .feature-block
+8. Gallery list / .gallery-list
+9. Pagination / .pagination
+10. Social networks / .social-networks
+11. Partner block / .partner-block
+12. Table / .table
+13. Carousel
+14. Blog
+15. Search form / .search-form
+16. Comment form / .comment-form
+17. Contact page
+18. Default Page
+19. Footer / #footer
+20. Background colors
+21. Elements
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+1. General styles and resets
+-------------------------------------------------------------------*/
+
+// ---  MODIFIERS  ---
+@import 'modifiers/custom-variables';
+@import 'modifiers/mixins';
+
+//  --- BOOTSTRAP ---
+@import 'bootstrap-custom';
+@import 'vendors/bootstrap/bootstrap/variables';
+@import 'vendors/bootstrap/bootstrap/mixins';
+
+// ---  BASE  ---
+@import 'base/base';
+
+// -- THEME ---
+@import 'skins/color3';
+@import 'base/colors';
+@import 'base/typography';
+
+// // ---  PRELOADER ---
+@import 'components/preloader';
+
+// // ---  LAYOUT  --- 
+/*------------------------------------------------------------------
+2. Header / #header
+-------------------------------------------------------------------*/
+@import 'layout/header';
+@import 'components/header-top';
+@import 'components/header-v1';
+@import 'components/header-v2';
+/*------------------------------------------------------------------
+3. Sidebar / .sidebar
+-------------------------------------------------------------------*/
+@import 'layout/sidebar';
+@import 'layout/boxed-layout';
+
+// // ---  COMPONENTS  ---
+@import 'components/external-override';
+@import 'components/testimonial';
+@import 'components/services';
+/*------------------------------------------------------------------
+4. Parallax / .parallax
+-------------------------------------------------------------------*/
+@import 'components/parallax';
+@import 'components/parallax-images';
+/*------------------------------------------------------------------
+5. Navigation / .navbar-nav
+-------------------------------------------------------------------*/
+@import 'components/navigation';
+@import 'components/dropdown';
+@import 'components/languages';
+/*------------------------------------------------------------------
+6. Banner / .banner
+-------------------------------------------------------------------*/
+@import 'components/banner';
+/*------------------------------------------------------------------
+7. feature block / .feature-block
+-------------------------------------------------------------------*/
+@import 'components/feature-block';
+@import 'components/content-block';
+/*------------------------------------------------------------------
+8. Gallery list / .gallery-list
+-------------------------------------------------------------------*/
+@import 'components/gallery-list';
+@import 'components/buttons';
+@import 'components/breadcrumbs';
+@import 'components/filter-option';
+/*------------------------------------------------------------------
+9. Pagination / .pagination
+-------------------------------------------------------------------*/
+@import 'components/pagination';
+@import 'components/count';
+@import 'components/article';
+@import 'components/list-view';
+@import 'components/recent-block';
+@import 'components/image-slide';
+@import 'components/popover';
+@import 'components/comments';
+@import 'components/star-rating';
+/*------------------------------------------------------------------
+10. Social networks / .social-networks
+-------------------------------------------------------------------*/
+@import 'components/social-networks';
+@import 'components/seperator';
+@import 'components/booking-blocks';
+@import 'components/featured-content';
+@import 'components/progress-bar';
+@import 'components/block-quotation';
+/*------------------------------------------------------------------
+11. Partner block / .partner-block
+-------------------------------------------------------------------*/
+@import 'components/partner-block';
+@import 'components/ico-article';
+@import 'components/step-block';
+@import 'components/content-intro';
+@import 'components/trip-info';
+@import 'components/header-box';
+@import 'components/tabs';
+/*------------------------------------------------------------------
+12. Table / .table
+-------------------------------------------------------------------*/
+@import 'components/table';
+@import 'components/detail-accordion';
+@import 'components/fancybox';
+/*------------------------------------------------------------------
+13. Carousel
+-------------------------------------------------------------------*/
+@import 'components/carousel';
+@import 'components/content-list';
+@import 'components/reviews-info';
+@import 'components/range-slider';
+/*------------------------------------------------------------------
+14. Blog
+-------------------------------------------------------------------*/
+@import 'components/blog';
+@import 'components/disable-wow';
+
+// // ---  COMPONENTS ** Forms  ---
+/*------------------------------------------------------------------
+15. Search form / .search-form
+-------------------------------------------------------------------*/
+@import 'components/search-form';
+@import 'components/trip-form';
+@import 'components/custom-form';
+@import 'components/subscribe-form';
+/*------------------------------------------------------------------
+16. Comment form / .comment-form
+-------------------------------------------------------------------*/
+@import 'components/comment-form';
+
+// ---  PAGES  ---
+/*------------------------------------------------------------------
+17. Contact page
+-------------------------------------------------------------------*/
+@import 'pages/contact-page';
+@import 'pages/tour-detail';
+@import 'pages/error-page';
+/*------------------------------------------------------------------
+18. Default Page
+-------------------------------------------------------------------*/
+@import 'pages/default-page';
+@import 'pages/home-page';
+@import 'pages/cart-page';
+@import 'pages/features';
+@import 'pages/icon-font';
+
+/*------------------------------------------------------------------
+19. Footer / #footer
+-------------------------------------------------------------------*/
+@import 'layout/footer';
+
+/*------------------------------------------------------------------
+20. Background Color
+-------------------------------------------------------------------*/
+@import 'components/backgrounds';
+
+// --- INTRO PAGE ---
+@import 'components/intro-page';
+
+/*------------------------------------------------------------------
+20. Scroll To Top / #scroll-to-top
+-------------------------------------------------------------------*/
+@import 'components/scroll-top';
+@import 'components/bootstrap-datepicker';
+@import 'components/trip-form-v2';
+
+/*------------------------------------------------------------------
+21. Elements / .demo-wrapper
+-------------------------------------------------------------------*/
+@import 'components/elements';
+@import 'components/data-table';
+@import 'components/icon-hover';

@@ -1,0 +1,37 @@
+#scroll-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    background: rgba($black, 0.7);
+    width: 45px;
+    height: 45px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 99;
+
+    i {
+    	color: $primary-color;
+	    position: relative;
+	    top: 12px;
+	    font-size: 20px;
+	    transition: all 0.3s ease;
+	    transform: rotate(180deg);
+	    display: inline-block;
+    }
+
+    &:hover {
+    	background: rgba($black, 0.9);
+
+    	i {
+    		color: $white;
+    		top: 10px;
+    	}
+    }
+
+    @include breakpoint-min($screen-sm) {
+    	bottom: 25px;
+    	right: 25px;
+    }
+}

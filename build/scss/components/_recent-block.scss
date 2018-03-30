@@ -1,0 +1,196 @@
+/* recent block styles */
+.recent-block {
+	padding: $global-sm-space 0;
+
+	h2 {
+		margin: 0;
+	}
+
+	.thumbnail {
+		padding: 20px 10px;
+
+		&:hover {
+			.sub-info {
+				span {
+					&:last-child {
+						color: $secondary-color;
+					}
+				}
+			}
+		}
+	}
+
+	&.recent-wide-thumbnail {
+		.img-wrap {
+			margin: 0 -10px 25px;
+		}
+		.thumbnail {
+			@extend %transition;
+			
+			&:hover {
+				box-shadow: 0 3px 7px rgba($black, 0.35);
+			}
+		}
+	}
+
+	&.recent-list {
+		.thumbnail {
+			background: $teritory-color;
+			box-shadow: none;
+		}
+	}
+
+	.article {
+		margin-top: $global-xs-space;
+	}
+
+	&.recent-gray {
+		background: $teritory-color;
+
+		.thumbnail {
+			background: $white;
+		}
+
+		.article {
+			.col-holder {
+				background: $white;
+				box-shadow: none;
+			}
+
+			footer {
+				margin: 0;
+			}
+		}
+	}
+
+	.thumbnail {
+		background: $desert-storm;
+	}
+
+	h3{
+		color: $text-color;
+	}
+
+	.article {
+		.img-wrap {
+			margin-bottom: 20px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	footer {
+		@extend %clearfix;
+		overflow: visible;
+		border-top: 0;
+		margin-top: 0;
+	}
+
+	.sub-info {
+		float: right;
+		width: 124px;
+		font-size: 1.143em;
+		line-height: 1em;
+		font-weight: 700;
+		margin: 0 -10px;
+
+		span{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 10px;
+			position: relative;
+			margin-right: -.25em;
+
+			&:before {
+				content: '';
+				left: 0;
+				top: 2px;
+				bottom: 2px;
+				background: $scarpa-flow;
+				width: 1px;
+				position: absolute;
+			}
+
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.ico-list {
+		overflow: visible;
+		float: left;
+		width: calc(100% - 112px);
+		margin: 0 -5px;
+
+		li {
+			margin: 0 5px 5px;
+			padding: 0;
+		}
+
+		.popup {
+			padding: 5px;
+		}
+
+		[class^="icon-"], 
+		[class*=" icon-"] {
+			font-size: 20px;
+		}
+
+		.hover {
+			display: none;
+		}
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		padding-bottom: $global-md-space;
+
+		h2 {
+			margin: 0 0 15px;
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		padding: $global-md-space 0 $global-bottom-space;
+
+		.ico-list {
+			float: none;
+			width: auto;
+		}
+
+		.sub-info {
+			float: none;
+			width: auto;
+			margin-bottom: 15px;
+		}
+	}
+
+	@include breakpoint-min ($screen-lg) {
+		h2 {
+			margin-bottom: $global-sm-space;
+		}
+
+		.ico-list {
+			float: left;
+			width: calc(100% - 112px);
+		}
+
+		.article {
+			margin-top: 0;
+		}
+
+		.sub-info {
+			float: right;
+			width: 124px;
+			margin-bottom: 0;
+		}
+	}
+}

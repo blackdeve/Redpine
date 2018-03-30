@@ -1,0 +1,186 @@
+/* button styles */
+.btn {
+	text-transform: uppercase;
+	@extend %transition;
+
+	&.radius {
+		border-radius: 25px;
+	}
+
+	&.btn-h-slide {
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			content: '';
+			width: 0;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			z-index: -1;
+			transition: width .2s linear;
+			transition: all .2s linear;
+		}
+
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	&.btn-shadow {
+		box-shadow: 1px 2px 5px rgba($black, 0.35);
+	}
+
+	&.btn-primary {
+		background: none;
+		
+		&:hover {
+			border-color: $primary-color;
+			background: $primary-color;
+			color: $white;
+		}
+	}
+
+	&.btn-default {
+		font-weight: 700;
+		padding: 3px 20px;
+		letter-spacing: 1px;
+		min-width: 150px;
+		font-size: 16px;
+		line-height: 20px;
+		border-color: $platinum;
+		background: $button-bg;
+		@extend .btn-h-slide;
+
+		&:before {
+			background: $primary-color;
+		}
+
+		&:hover {
+			background: $button-hover-bg;
+			border-radius: $default-btn-radius;
+			border-color: $border-default-hover-color;
+		}
+	}
+
+	&.btn-trip {
+		border-radius: 3px;
+		font-style: normal;
+		font-weight: 700;
+		width: 100%;
+		color: $btn-trip-color;
+		background: $btn-trip-bg;
+		letter-spacing: 0.05em;
+
+		&:hover {
+			background: darken($trip-background, 10);
+		}
+	}
+
+	&.btn-info-sub {
+		background: $button-info-sub-bg;
+		border-color: $button-info-sub-bg;
+		color: $button-info-sub-color;
+		font-weight: 700;
+		
+		&:hover {
+			box-shadow: none;
+			color: $button-info-sub-hover-color;
+			background: $button-info-sub-bg-hover;
+			border-color: $button-info-sub-border-hover;
+		}
+	}
+
+	&.btn-info {
+		background: $button-info-bg;
+		border-color: $button-info-bg;
+		color: $white;
+		
+		&:hover {
+			background: $button-info-bg-hover;
+			color: $button-info-hover-color;
+		}
+	}
+
+	&.btn-white {
+		border: 1px solid $white;
+		color: $white;
+		padding: 3px 15px;
+		min-width: 260px;
+
+		&:hover {
+			background: $white;
+			color: $primary-color;
+		}
+	}
+
+	&.btn-lg {
+		padding: 10px;
+		min-width: 250px;
+	}
+
+	&.btn-md {
+		font-size: 18px;
+		line-height: 24px;
+		padding: 12px;
+		min-width: 250px;
+		letter-spacing: 1px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		&.btn-lg {
+			font-size: 30px;
+			line-height: 38px;
+			font-weight: 300;
+			min-width: 345px;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+.btn-banner {
+	z-index: 8; 
+	white-space: nowrap;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 700; 
+	color: $primary-color; 
+	background-color:transparent; 
+	padding:7px 45px; 
+	border: 1px solid $button-banner-border-color;
+	text-transform: uppercase; 
+
+	&:hover {
+		background: $button-banner-bg-hover-color;
+		color: $white;
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		font-size: 18px; 
+		line-height: 22px; 
+		padding: 12px 70px;
+		border-width: 2px;
+		letter-spacing: 1px;
+	}
+}
+
+.banner-caption-s1,
+.banner-home .banner-caption-s1 {
+	.center-text {
+		.btn-banner-holder {
+			margin-top: 20px;
+
+			@include breakpoint-min ($screen-sm) {
+				margin-top: 50px;
+			}
+		}
+
+		.btn-banner {
+			border-radius: 25px;
+		}
+	}
+}

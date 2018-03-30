@@ -1,0 +1,174 @@
+/* cart holder of the page */
+.cart-holder {
+	table.table {
+		table-layout: initial;
+
+		tbody {
+			tr {
+				.middle {
+					padding-top: 20px;
+					padding-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	.price {
+		font-weight: 700;
+	}
+
+	.delete {
+		font-size: 24px;
+		color: $shark;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	.img-wrap {
+		width: 85px;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.text-wrap {
+		overflow: hidden;
+	}
+
+	.product-title {
+		display: block;
+		font-weight: 400;
+		margin-bottom: 5px;
+		font-family: $montserrat;
+	}
+
+	.time {
+		display: block;
+		font-style: italic;
+		font-weight: normal;
+	}
+
+	.num-hold {
+		width: 150px;
+		height: 32px;
+		background: $desert-storm;
+		border: 1px solid $bon-jour;
+		text-align: center;
+		line-height: 29px;
+
+		.control {
+			float: left;
+			height: 100%;
+			border-style: solid;
+			border-color: $bon-jour;
+			border-width: 0 1px 0 0;
+			width: 41px;
+			color: $text-color;
+			font-size: 14px;
+			line-height: 31px;
+
+			&:hover {
+				background: $bon-jour;
+			}
+
+			&.plus {
+				float: right;
+				border-width: 0 0 0 1px;
+			}
+		}
+
+		
+		.val {
+			padding: 0 10px;
+			font-weight: 700;
+		}
+	}
+}
+
+.cart-option {
+	padding-top: 15px;
+	max-width: 400px;
+	margin: 0 auto;
+	@extend %clearfix;
+
+	.btn {
+		height: 41px;
+		width: 100%;
+		float: none;
+	}
+
+	.button-hold {
+		text-align: center;
+
+		.btn {
+			margin: 0 0 20px;
+			padding: 10px 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		max-width: none;
+
+		.coupon-hold {
+			margin-bottom: 0;
+
+			.input-hold {
+				.form-control {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.button-hold {
+			float: right;
+			max-width: 50%;
+			margin-bottom: 0;
+
+			.btn {
+				margin: 0 0 0 25px;
+				float: left;
+			}
+		}
+
+		.btn {
+			width: auto;
+		}
+	}
+}
+
+/* coupon holder styles */
+.coupon-hold {
+	margin-bottom: 20px;
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+
+	.submit-wrap {
+		display: table-footer-group;
+		height: 1%;
+	}
+
+	.input-hold {
+		overflow: hidden;
+	}
+
+	.form-control {
+		margin-bottom: 10px;
+		height: 41px;
+	}
+
+	@include breakpoint-min ($screen-md) {
+		width: 400px;
+		float: left;
+
+		.submit-wrap {
+			float: right;
+			height: auto;
+			margin-left: 20px;
+		}
+	}
+}

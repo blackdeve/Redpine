@@ -1,0 +1,74 @@
+/* content intro styles */
+.content-intro {
+	padding-bottom: $global-md-space;
+
+	.text-holder {
+		padding-top: $global-md-space;
+		margin-bottom: $global-sm-space;
+		text-align: center;
+
+		.btn-holder {
+			margin-top: 45px;
+		}
+	}
+
+	.map-col {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		margin-top: 20px;
+
+		.holder {
+			background: $listview-mapbg;
+			border: 10px solid darken($listview-mapbg, 10);
+			padding: 10px;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+
+	.map-holder {
+		margin: 0 0 20px;
+		border: 0;
+	}
+
+	.info {
+		color: $white;
+
+		strong {
+			display: block;
+			font-size: 18px;
+			font-weight: 700;
+			font-family: $montserrat;
+		}
+
+		.sub {
+			font-style: italic;
+		}
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		padding-bottom: $global-space;
+
+		.text-holder {
+			text-align: left;
+			padding-top: $global-space;
+		}
+	}
+
+	@include breakpoint-min ($screen-md) {
+		padding-bottom: $global-space;
+		
+		.map-col {
+			text-align: left;
+
+			.holder {
+				margin-top: -100px;
+			}
+		}
+
+		.text-holder {
+			padding-top: $global-top-space;
+		}
+	}
+}

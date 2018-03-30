@@ -1,0 +1,199 @@
+/* table container styles */
+.table-container {
+	.date-text {
+		display: block;
+		font-size: 16px;
+		margin-bottom: 5px;
+		font-family: $montserrat;
+	}
+
+	.sub-text {
+		display: block;
+		font-weight: 400;
+		font-style: italic;
+		letter-spacing: 0.09em;
+	}
+
+	.btn {
+		float: right;
+	}
+}
+
+/* stripped table styles */
+.table-striped {
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background: $desert-storm;
+			}
+			&:nth-child(odd) {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.table-hover {
+	tbody {
+		tr {
+			transition: background 0.2s linear;
+			
+			&:hover {
+				background: $desert-storm;
+			}
+		}
+	}
+}
+
+/* global table styles */
+table.table {
+	font-size: .9em;
+	min-width: 725px;
+
+	tbody,
+	thead {
+		tr {
+			td {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.btn {
+		min-width: 1px;
+		font-size: 1em;
+	}
+
+	tbody {
+		td {
+			&:last-child {
+				.cell {
+					border-right: 1px solid $desert-storm;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		table-layout: fixed;
+
+		&.table-align-right {
+			td ,
+			th {
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			border-color: $white;
+			border-style: solid;
+			border-width: 15px 0;
+			background: transparent;
+			td {
+				&:first-child {
+					.cell {
+						border-left: 1px solid $desert-storm;
+					}
+				}
+
+				.cell {
+					border: solid $desert-storm;
+					border-width: 1px 0;
+				}
+			}
+		}
+	}
+
+	> thead {
+		> tr {
+			> th {
+				border: 0;
+				padding: 10px 5px 15px;
+			}
+		}
+	}
+
+	> tbody {
+		> tr {
+			background: none;
+			font-weight: 500;
+
+			&:first-child {
+				td {
+					border-top: 0;
+				}
+			}
+
+			> td {
+				padding: 0;
+			}
+
+			.middle {
+				padding: 5px;
+				min-height: 65px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.btn {
+			min-width: 150px;
+		}
+
+		thead {
+			tr {
+				th {
+					padding: 10px 20px 15px;
+				}
+			}
+		}
+
+		tbody {
+			td {
+				.middle {
+					padding: 5px 20px;
+				}
+			}
+		}
+	}
+}
+
+.table-responsive>.table>thead>tr>th, 
+.table-responsive>.table>thead>tr>td, 
+.table-responsive>.table>tbody>tr>th, 
+.table-responsive>.table>tbody>tr>td, 
+.table-responsive>.table>tfoot>tr>th, 
+.table-responsive>.table>tfoot>tr>td {
+	white-space: normal;
+}
+
+.table {
+	.cell {
+		display: table;
+		width: 100%;
+		min-height: 65px;
+
+		.middle {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+}
+
+@include breakpoint-min($screen-md) {
+	table.table {
+		font-size: 1em;
+	}
+}
+
+.table-responsive {
+	@include breakpoint-max($screen-md - 1) {
+		overflow: auto;
+		overflow-y: hidden;
+		width: 100%;
+	} 
+}

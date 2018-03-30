@@ -1,0 +1,77 @@
+/* carousel styles */
+.carousel {
+	&.carousel-fade {
+		.carousel-inner {
+			.item {
+				opacity: 0;
+				-webkit-transition-property: opacity;
+				-moz-transition-property: opacity;
+				-o-transition-property: opacity;
+				transition-property: opacity;
+			}
+
+			.item,
+			.active.left,
+			.active.right {
+				opacity: 0;
+			}
+
+			.active,
+			.next.left,
+			.prev.right {
+				opacity: 1;
+				z-index: 2;
+			}
+
+			.next,
+			.prev,
+			.active.left,
+			.active.right {
+				left: 0;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+
+	.carousel-control {
+		@include translate(0, -50%);
+		background: $neutral-color;
+		width: 30px;
+		height: 30px;
+		top: 50%;
+		opacity: 1;
+		font-size: 8px;
+		line-height: 30px;
+		text-shadow: none;
+		z-index: 2;
+
+		span {
+			display: inline-block;
+		}
+
+		&.left {
+			span {
+				@include rotate(90deg);
+			}
+		}
+
+		&.right {
+			span {
+				@include rotate(-90deg);
+			}
+		}
+
+		&:hover {
+			background: $primary-color;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.carousel-control {
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			font-size: 11px;
+		}
+	}
+}

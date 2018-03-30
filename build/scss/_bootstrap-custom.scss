@@ -1,0 +1,82 @@
+@import 'base/colors';
+@import 'skins/main';
+
+// Scaffolding
+$body-bg: $white;
+$text-color: $scarpa-flow;
+$link-color: $scarpa-flow;
+$link-hover-decoration: none;
+
+$headings-font-weight: 700;
+$headings-color: $secondary-color;
+
+//Navbar
+$navbar-default-color: $white;
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $platinum;
+$navbar-default-link-active-bg: darken($shark, 2%);
+$navbar-default-link-hover-bg: darken($shark, 2%);
+$navbar-default-link-active-color: $white;
+$navbar-default-link-hover-color: $white;
+
+//Components
+$padding-base-vertical: 4px;
+$padding-base-horizontal: 10px;
+$border-radius-base: 0;
+$border-radius-large: 0;
+
+// Buttons
+$btn-default-color: $button-link-color;
+$btn-default-bg: $button-bg;
+$btn-default-border: $platinum;
+
+$btn-primary-color: $scarpa-flow;
+$btn-primary-bg: $white;
+$btn-primary-border: $scarpa-flow;
+
+$btn-info-color: $button-info-color;
+$btn-info-bg: $primary-color;
+$btn-info-border: $primary-color;
+
+// Dropdowns
+$dropdown-bg: $shark;
+$dropdown-link-color: $scarpa-flow;
+
+
+// Tooltips
+$tooltip-color: $white;
+$tooltip-bg: $scarpa-flow;
+
+// Thumbnails
+$thumbnail-padding: 10px;
+
+// Media queries breakpoints
+$screen-lg: 1230px;
+
+// Grid system
+$grid-float-breakpoint: 992px;
+
+// Container sizes
+$container-large-desktop: 1200px;
+
+// Tabs
+$nav-tabs-border-color: transparent;
+
+//Panels
+$panel-default-heading-bg: none;
+$panel-inner-border: transparent;
+$panel-heading-padding: 0;
+
+// Tables
+$table-bg-accent: transparent;
+$table-border-color: transparent;
+
+//Pagination
+$pagination-hover-color: $white;
+$pagination-hover-bg: $pagination-active-bg;
+$pagination-hover-border: $pagination-active-bg;
+$pagination-color: $scarpa-flow;
+$pagination-bg: $desert-storm;
+$pagination-active-color: $white;
+$pagination-active-bg: $pagination-active-bg;
+$pagination-active-border: $pagination-active-bg;

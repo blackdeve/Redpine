@@ -1,0 +1,138 @@
+/* default page styles */
+.default-spacing.confirmation-block {
+	@include breakpoint-min($screen-md) {
+		padding-bottom: $global-bottom-space;
+	}
+}
+
+.default-page {
+	#header {
+		background: $shark;
+		border-bottom: 1px solid darken($shark, 5%);
+	}
+	
+	.navbar-default .navbar-nav > li.has-mega-dropdown .dropdown-menu {
+		border-color: $black;
+	}
+
+	.logo {
+		border-right-color: darken($shark, 5%);
+	}
+
+	.header-right {
+		.login-holder,
+		.cart-holder {
+			>a {
+				&:hover {
+					color: $white;
+					opacity: 0.7;
+				}
+			}
+
+			&.active {
+				>a {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	#main {
+		@include breakpoint-min($screen-md) {
+			padding-top: 77px;
+		}
+
+		@include breakpoint-min($screen-lg) {
+			padding-top: $global-top-space;
+		}
+	}
+}
+
+.inner-top {
+	background: $desert-storm;
+	padding: $global-xs-space 0;
+	box-shadow: 1px 1.7px 2px rgba(173, 173, 173, 0.35);
+
+	h1 {
+		margin: 0 0 15px;
+		color: $text-color;
+	}
+
+	.breadcrumbs {
+		font-size: 0.8em;
+		color: $text-color;
+
+		a {
+			color: $link-color;
+
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	
+	@include breakpoint-min($screen-sm) {
+		padding: $global-sm-space 0;
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding: $global-md-space 0;
+
+		.breadcrumbs {
+			font-size: 1em;
+		}
+	}
+}
+
+.inner-main {
+	.contact-form {
+		padding: 20px 10px;
+		margin-bottom: 20px;
+		background: $gray;
+
+		.form-title {
+			padding-top: 5px;
+		}
+
+		.form-control {
+			border: 1px solid transparent;
+			border-bottom-color: $silver-chalice;
+			transition: border 0.2s linear;
+			padding: 5px;
+
+			&:focus {
+				border-bottom-color: $black;
+			}
+		}
+		.btn-holder {
+			padding-top: 0;
+		}
+
+		.forgot {
+			display: inline-block;
+			margin-bottom: 15px;
+			color: $white;
+			font-size: 0.8em;
+
+			&:hover {
+				color: $black;
+			}
+		}
+
+		[type="submit"].btn {
+			padding: 8px 25px;
+			width: auto;
+			font-size: 14px;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.contact-form {
+			padding: $global-md-space 20px;
+
+			.btn-holder {
+				padding-top: 15px;
+			}
+		}
+	}
+}

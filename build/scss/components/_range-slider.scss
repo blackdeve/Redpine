@@ -1,0 +1,42 @@
+/* range slider styles and override for ui widget */
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-radius: 0;
+}
+
+.ui-widget-content {
+	background: $gray;
+}
+
+.ui-slider-horizontal {
+	height: 6px;
+	border: none;
+	margin-top: 6px;
+
+	.ui-widget-header {
+		background: $gray;
+	}
+
+	.ui-slider-handle {
+		height: 18px;
+		width: 6px;
+		border: none;
+		margin-left: 0;
+		outline: none;
+		background: $gray;
+		top: -6px;
+
+		&.ui-state-active {
+			background: $gray;
+		}
+	}
+}
+
+.price-input {
+	text-align: center;
+	padding: 0;
+	margin-top: 10px;
+	color: $scarpa-flow;
+}

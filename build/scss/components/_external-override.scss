@@ -1,0 +1,70 @@
+// WOW default styles
+.wow {
+	visibility: hidden;
+}
+
+// ui widget font override
+.ui-widget {
+	font-family: $font-family-base;
+}
+
+.rev_slider {
+	color: $white;
+
+	@include breakpoint-max($screen-sm - 1) {
+		.tparrows {
+			display: none !important;
+		}
+	}
+
+}
+
+.rev_slider_wrapper {
+	font-family: $roboto;
+
+	.banner-heading-sub {
+		font-family: $roboto;
+		font-size: 26px;
+		line-height: 30px;
+		color: $revolution-text-color;
+		padding-right: 10px;
+	}
+
+	.banner-heading-text {
+		font-family: $montserrat;
+	}
+
+	.rev-btn {
+		// overflow: hidden;
+		font-family: $font-family-base !important; // to override revolution default style
+
+		.btn-banner {
+			border-color: $rev-button-border-color;
+			background: $rev-button-bg-color;
+			color: $rev-button-text-color;
+			border-radius: 25px;
+
+			&:hover {
+				border-color: $rev-button-border-hover-color;
+				background: $rev-button-bg-hover-color;
+				color: $rev-button-text-hover-color;
+			}
+		}
+
+		&.filled {
+			a {
+				color: $primary-color;
+			}
+
+			&:hover {
+				a {
+					color: $primary-color;
+				}
+			}
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+}

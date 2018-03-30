@@ -1,0 +1,22 @@
+/* article with icon */
+.ico-article {
+	margin-top: $global-xs-space;
+	line-height: 1.714;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.ico-holder {
+		margin: 0 0 13px;
+		min-height: 35px;
+	}
+
+	@include breakpoint-min ($screen-sm) {
+		margin-top: $global-sm-space;
+		max-width: none;
+
+		.ico-holder {
+			min-height: 65px;
+		}
+	}
+}

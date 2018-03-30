@@ -1,0 +1,154 @@
+/* error page styles */
+.error-page {
+	#main {
+		padding-top: $global-xs-space;
+
+		@include breakpoint-min($screen-sm) {
+			padding-top: $global-space;
+		}
+
+		@include breakpoint-min($screen-md) {
+			padding-top: $global-top-space;
+		}
+	}
+	#header.fixed-position{
+		.cart-holder {
+			&:before {
+				background: $gray-nurse;
+			}
+		}
+	}
+}
+
+.error-holder {
+	background-color: $error-page-bg;
+	color: $white;
+	text-align: center;
+	padding: $global-xs-space 0 $global-sm-space;
+	position: relative;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+		z-index: 3;
+	}
+
+	h1 {
+		color: $white;
+		font-size: 5.714em;
+		line-height: 1.3;
+		margin-bottom: $global-xs-space;
+		font-weight: 400;
+	}
+
+	.title {
+		display: block;
+		font-size: 1.786em;
+		line-height: 1.2;
+		margin-bottom: $global-sm-space;
+	}
+
+	.button-holder {
+		.btn {
+			margin: 0 0 10px;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding-top: $global-space;
+
+		h1 {
+			font-size: 6.143em;
+		}
+
+		.title {
+			font-size: 2.143em;
+			margin-bottom: $global-md-space;
+		}
+
+		.button-holder {
+			.btn {
+				width: auto;
+				min-width: 270px;
+				margin: 0 14px 20px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding-top: $global-top-space;
+
+		h1 {
+			font-size: 7.143em;
+		}
+
+		.title {
+			margin-bottom: $global-space;
+		}
+	}
+}
+
+/* inner search form styles */
+.inner-search {
+	font-size: 1em;
+	line-height: 1.4;
+	margin: 0 auto $global-sm-space;
+
+	.input-wrap {
+		max-width: 570px;
+		margin: 0 auto 40px;
+		background: $white;
+		height: 50px;
+		position: relative;
+	}
+
+	[type="text"] {
+		width: 100%;
+		height: 100%;
+		border: 1px solid transparent;
+		padding: 10px 45px 10px 20px;
+		color: $gray;
+		font-size: 14px;
+		line-height: 20px;
+		outline: none;
+		text-transform: uppercase;
+		transition: border 0.3s linear;
+
+		&::-webkit-input-placeholder {color: $gray;}
+		&:-moz-placeholder           {color: $gray;}
+		&::-moz-placeholder          {color: $gray;}
+		&:-ms-input-placeholder      {color: $gray;}
+
+		&:focus {
+			border-color: $gray;
+		}
+	}
+
+	[type="submit"] {
+		position: absolute;
+		background: transparent;
+		border: none;
+		color: $gray-g;
+		right: 20px;
+		font-size: 15px;
+		top: 50%;
+		padding: 0;
+		margin: 2px 0 0;
+		transform: translate(0, -50%);
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		font-size: 1.286em;
+		line-height: 2;
+		margin-bottom: $global-md-space;
+		max-width: 950px;
+	}
+
+	@include breakpoint-min($screen-md) {
+		margin-bottom: $global-space;
+	}
+}

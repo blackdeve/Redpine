@@ -1,0 +1,36 @@
+/* breadcrumbs styles */
+.breadcrumbs {
+	color: $white;
+	font-size: 1.143em;
+	text-transform: uppercase;
+
+	ul {
+		@extend %listreset;
+	}
+
+	li {
+		display: inline;
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		&:before {
+			content: '/';
+			display: inline-block;
+			vertical-align: middle;
+			margin: -5px 2px 0;
+		}
+	}
+
+	a {
+		color: $white;
+		transition: color 0.2s linear;
+
+		&:hover{
+			color: darken($white, 10%);
+		}
+	}
+}

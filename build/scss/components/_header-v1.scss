@@ -1,0 +1,41 @@
+/* header v1 styles */
+.header-v1 {
+	.logo {
+		text-align: left;
+		border: 0;
+	}
+
+	.navbar-default {
+		.navbar-nav {
+			li {
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	@include breakpoint-max($screen-md - 1) {
+		.container {
+			width: auto;
+			padding: 0;
+		}
+
+		.header-top {
+			padding: 10px 30px;
+		}
+	}
+
+	.has-mega-dropdown {
+		.dropdown-menu {
+			left: 0;
+			right: 0;
+		}
+	}
+
+	.has-mega-dropdown.mega-md {
+		.dropdown-menu {
+			right: 30px;
+		}
+	}
+}

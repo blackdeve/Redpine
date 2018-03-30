@@ -1,0 +1,28 @@
+@import "../base/colors";
+@import "../skins/main";
+
+//breakpoint
+$large-screen: 1600px;
+$medium-screen: 1300px;
+$desktop-screen: 1170px;
+$screen-tab: 1024px;
+$screen-mobile: 540px;
+
+// color variables
+$nav-title-color: $silver-chalice;
+
+// button radius
+$default-btn-radius: 0;
+
+// global spacing 
+$global-top-space: 100px;
+$global-bottom-space: 100px;
+$global-space: 90px;
+$global-md-space: 60px;
+$global-sm-space: 45px;
+$global-xs-space: 30px;
+
+// variables for comment reply form
+$thumb: 75px;
+$reply-padding-left: 100px;
+

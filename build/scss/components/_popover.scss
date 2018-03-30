@@ -1,0 +1,78 @@
+/* global popup styels */
+.popup {
+	@include translate(-50%, 15px);
+	width: 100px;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	border-radius: 7px;
+	background: $primary-color;
+	color: $white;
+	padding: 2px 5px;
+	text-align: center;
+	text-transform: uppercase;
+	display: none;
+	z-index: 999;
+	font-size: 12px;
+
+	&:before {
+		@include translate(-50%, 0);
+		border-left: 6px solid transparent;
+		border-right: 6px solid transparent;
+		border-bottom: 7px solid $primary-color;
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 100%;
+	}
+}
+
+.pop-opener {
+	position: relative;
+
+	&:hover {
+		[class^="icon-"], 
+		[class*=" icon-"] {
+			color: $primary-color;
+		}
+
+		.popup {
+			display: block;
+		}
+	}
+}
+
+.recent-block {
+	.popup {
+		top: auto;
+		bottom: 100%;
+		margin-bottom: 25px;
+
+		&:before {
+			border-bottom: 0;
+			border-top: 7px solid $secondary-color;
+			bottom: auto;
+			top: 100%;
+		}
+	}
+}
+
+/* styles for popup within article */
+.article {
+	.pop-opener {
+		&:hover {
+			[class^="icon-"], 
+			[class*=" icon-"] {
+				color: $secondary-color;
+			}
+		}
+	}
+
+	.popup {
+		background: $secondary-color;
+
+		&:before {
+			border-bottom-color: $secondary-color;
+		}
+	}
+}

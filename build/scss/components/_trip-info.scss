@@ -1,0 +1,612 @@
+/* trip info styles */
+.trip-info {
+	background: $trip-info-bg;
+
+	.height {
+		&:first-child {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	.text-col {
+		white-space: nowrap;
+		text-align: center;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			margin-right: -.25em;
+		}
+
+		.holder {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+			white-space: normal;
+			max-width: 755px;
+			padding: $global-xs-space 0;
+		}
+	}
+
+	h1{
+		margin-bottom: 35px;
+	}
+
+	.price {
+		font-size: 1.7124em;
+		line-height: 1.33333em;
+		font-weight: 300;
+		font-style: italic;
+		margin: 0 0 $global-xs-space;
+
+		strong {
+			font-style: normal;
+			font-weight: 700;
+			display: block;
+			color: $heading-color;
+			margin-top: 20px;
+			font-family: $montserrat;
+		}
+	}
+
+	.description {
+		margin-bottom: $global-xs-space;
+	}
+
+	.reviews-info {
+		.star-rating {
+			color: $secondary-color;
+		}
+	}
+
+	.social-share {
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		li{
+			display: table-cell;
+		}
+
+		.ico {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 18px;
+		}
+	}
+
+	.btn-holder {
+		margin: 0 0 $global-sm-space;
+	}
+
+	@media only screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+		.bg-stretch {
+			position: static;
+			
+			img {
+				width: 100% !important; // to override js inline style
+				height: auto !important; // to override js inline style
+				margin: 0 !important; // to override js inline style
+			}
+		}
+	}
+
+	@media only screen and (min-width: 320px) and (max-width: $screen-sm - 1) and (orientation: portrait) {
+		.bg-stretch {
+			position: static;
+			
+			img {
+				width: 100% !important; // to override js inline style
+				height: auto !important; // to override js inline style
+				margin: 0 !important; // to override js inline style
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		.text-col {
+			.holder {
+				padding: $global-sm-space 20px;
+			}
+		}
+
+		.price {
+			margin-bottom: $global-xs-space;
+			font-size: 2.143em;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.reviews-info {
+			margin-bottom: 0;
+		}
+	}
+
+	@include breakpoint-min($large-screen) {
+		padding-bottom: 0;
+
+		> .row {
+			height: calc(100vh - 101px);
+
+			> .height {
+				min-height: 100%;
+			}
+		}
+
+		.reviews-info {
+			margin-bottom: $global-sm-space;
+		}
+
+		.social-share {
+			li {
+				.ico {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.text-col {
+			.holder {
+				padding: $global-top-space 20px $global-bottom-space;
+			}
+		}
+
+		.description {
+			margin-bottom: $global-space;
+		}
+
+		.btn-holder {
+			margin-bottom: $global-bottom-space;
+		}
+
+		.btn-holder {
+			margin-bottom: $global-bottom-space;
+		}
+	}
+}
+
+.reviews-slot {
+	.name {
+		font-size: 1.143em;
+	}
+}
+
+#tour-slide {
+	height: 100%;
+
+	.owl-wrapper-outer,
+	.owl-item,
+	.owl-wrapper {
+		height: 100%;
+	}
+
+	.owl-controls {
+		margin: 0
+	}
+
+	.slide {
+		min-height: 320px;
+	}
+
+	.owl-buttons {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	.owl-prev,
+	.owl-next {
+		float: left;
+		background: $shark;
+		color: $white;
+		width: 50px;
+		height: 50px;
+		float: left;
+		text-align: center;
+		line-height: 50px;
+		font-size: 14px;
+		transition: background linear .3s;
+		border: 0;
+		font-size: 0;
+		z-index: 9;
+		position: relative;
+		border-radius: 0;
+		margin: 0;
+		opacity: 1;
+
+		&:after {
+			@include rotate(270deg);
+			content: "\e906";
+			font: 14px/50px 'icomoon';
+			display: block;
+			text-align: center;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+		}
+
+		&:hover {
+			background: $primary-color;
+		}
+	}
+
+	.owl-prev {
+		&:after {
+			@include rotate(90deg);
+		}
+	}
+}
+
+/* trip detail styles */
+.trip-detail {
+	padding-top: $global-sm-space;
+	padding-bottom: $global-sm-space;
+
+	.img-article {
+		max-width: none;
+		margin-bottom: $global-xs-space;
+
+		.text-block {
+			padding: 25px 20px 15px;
+			font-size: .857em;
+			font-weight: 400;
+			letter-spacing: .02em;
+		}
+
+		h3 {
+			font-size: 1.333em;
+			font-weight: 400;
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.comments {
+		padding-bottom: $global-sm-space;
+
+		.thumb {
+			width: 80px;
+		}
+
+		.text {
+			width: auto;
+		}
+
+		.des {
+			border-top-color: $gray;
+		}
+
+		.link-more {
+			margin: 0;
+			letter-spacing: 0.04em;
+		}
+
+		.comment-holder {
+			margin-bottom: $global-xs-space;
+		}
+	}
+
+	.header-box {
+		margin-bottom: 20px;
+	}
+
+	.gallery-list {
+		margin: 0 -15px;
+
+		&.has-center {
+			.title {
+				padding-bottom: 10px;
+				margin-bottom: 15px;
+				letter-spacing: 0.03em;
+			}
+		}
+
+		li {
+			width: auto;
+			margin: 0 auto $global-xs-space;
+			float: none;
+			max-width: 400px;
+			padding: 0 15px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	[class^="col-"], 
+	[class*=" col-"] {
+		margin-bottom: $global-xs-space;
+	}
+
+	.nav-wrap {
+		background: $primary-color;
+		padding: 20px 0;
+	}
+
+	.img-list {
+		@extend %listreset; 
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 20px;
+		}
+	}
+
+	.tab-content {
+		padding: $global-xs-space 0;
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	.detail {
+		padding: 20px 10px 10px;
+		background: $desert-storm;
+		box-shadow: 1px 1px 1px rgba(1, 2, 2, 0.1);
+
+		p {
+			margin: 0 0 25px;
+		}
+
+		.reviews-slot {
+			padding-top: 25px;
+			border-top: 1px solid $mercury;
+			margin-top: 15px;
+			padding-bottom: 5px;
+		}
+
+		.img-list {
+			@extend %justify;
+			padding-bottom: 10px;
+		}
+	}
+
+	.text-box {
+		padding-left: 55px;
+		padding-bottom: 35px;
+
+		&.not-included {
+			&:before {
+				content: "\e947";
+			}
+		}
+
+		&:before {
+			font: 40px/1 'icomoon';
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			content: "\e957";
+			color: $silver-chalice;
+		}
+	}
+
+	.accomodation-block {
+		.text-box {
+			padding-right: 30px;
+			padding-bottom: $global-sm-space;
+
+			.sub-title {
+				margin-bottom: $global-xs-space;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		padding-top: $global-md-space;
+		padding-bottom: $global-md-space;
+
+		.gallery-list {
+			li {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		padding-top: $global-space;
+		padding-bottom: $global-space;
+
+		.text-box {
+			padding-left: 100px;
+			margin-bottom: $global-sm-space;
+
+			&:before {
+				top: 19px;
+				font-size: 48px;
+			}
+		}
+
+		.comments {
+			.thumb {
+				width: 70px;
+			}
+
+			.text {
+				width: calc(100% - 80px);
+			}
+		}
+
+		[class^="col-"], 
+		[class*=" col-"] {
+			margin-bottom: 0;
+		}
+
+		.detail {
+			padding: 40px 40px 20px 30px;
+		}
+
+		.gallery-list {
+			li {
+				width: 33.3333%;
+			}
+		}
+
+		.text-box {
+			padding-right: 80px;
+		}
+	}
+
+	@include breakpoint-min ($screen-lg) {
+		padding-bottom: $global-space;
+	}
+}
+
+/* reviews info styles */
+.reviews-info {
+	@extend %listreset;
+	margin-bottom: $global-sm-space;
+
+	> li {
+		@extend %clearfix;
+		padding: 0 0 5px;
+		position: relative;
+		margin: 0 0 15px 0;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 1px;
+			background: $platinum;
+		}
+	}
+
+	.info-left {
+		width: 50%;
+		padding-right: 10px;
+		float: left;
+		text-align: left;
+	}
+
+	.info-right {
+		float: right;
+		max-width: 50%;
+		text-align: right;
+	}
+
+	.title {
+		display: block;
+	}
+	.ico-list {
+		@extend %listreset;
+		margin-left: -5px;
+		margin-right: -5px;
+
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0 5px;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		margin: 0 -30px 50px;
+
+		> li {
+			padding: 0 30px 5px;
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			margin-right: -.25em;
+			margin-bottom: 40px;
+			font-size: 16px;
+
+			&:before {
+				left: 30px;
+				right: 30px;
+			}
+		}
+	}
+
+	@include breakpoint-min($medium-screen) {
+		margin-bottom: 80px;
+	}
+}
+
+.question-select {
+	margin-bottom: 20px;
+
+	.jcf-select {
+		border: 1px solid $desert-storm;
+		display: block;
+		padding: 10px;
+		margin: 0;
+
+		&:hover {
+			.jcf-select-text {
+				color: $primary-color;
+			}
+		}
+
+		.jcf-select-text {
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: normal;
+			font-family: $montserrat;
+			color: $scarpa-flow;
+			margin-right: 30px;
+			letter-spacing: 0;
+			text-transform: none;
+		}
+
+		.jcf-select-opener {
+			width: 31px;
+
+			&:after {
+				color: $gray;
+				left: 0;
+				right: auto;
+				font-size: 15px;
+				line-height: 1;
+				margin-top: -7px;
+			}
+		}
+	}
+
+	.nav {
+		display: none;
+	}
+
+	@include breakpoint-min($screen-md) {
+		.jcf-select {
+			padding: 20px 50px 20px 30px;
+
+
+			.jcf-select-text {
+				font-size: 16px;
+				line-height: 1.71429;
+			}
+
+			.jcf-select-opener {
+				width: 41px;
+
+				&:after {
+					font-size: 20px;
+					margin-top: -10px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+	#tour-slide {
+		height: 320px;
+
+		.bg-stretch {
+			position: absolute;
+		}
+	}
+}

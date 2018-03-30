@@ -1,0 +1,97 @@
+/* trip form styles */
+.trip-form {
+	font-size: 1.143em;
+	line-height: 1.5em;
+	font-style: italic;
+	font-weight: 700;
+	color: $trip-form-color;
+	max-width: 1170px;
+	margin: 0 auto;
+	box-shadow: $trip-shadow;
+	background: $trip-background;
+	border: 10px solid $trip-border;
+	padding: 20px 10px;
+	margin-top: 5%;
+
+	.holder {
+		padding: 0 5px;
+		text-align: left;
+		margin-bottom: 10px;
+	}
+
+	.select-holder {
+		margin: 10px 0 0;
+	}
+
+	.input-group.date {
+		max-width: none;
+	}
+	
+	@include breakpoint-max($screen-sm - 1) {
+		background: transparent;
+		box-shadow: none;
+		border: none;
+		padding: 0;
+		max-width: 450px;
+		margin-top: 0;
+
+		label {
+			display: none;
+		}
+	}
+
+	@include breakpoint-min($screen-sm) {
+		.holder {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 50%;
+			padding: 0 15px;
+			margin-right: -.25em;
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		display: block;
+		margin-bottom: -30px;
+		
+		.holder {
+			width: 25%;
+			padding: 0 30px;
+			margin-bottom: 30px;
+		}
+	}
+
+	@include breakpoint-min($large-screen) {
+		.trip-form {
+			margin-top: 10%;
+		}
+	} 
+}
+
+.trip-form-v2.trip-search-main {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 10%;
+	width: 100%;
+	font-size: 14px;
+	white-space: normal;
+	max-width: 1010px;
+
+	@include breakpoint-min($screen-md) {
+		vertical-align: middle;
+		margin-top: 0;
+		
+		.holder {
+			width: 33.33333%;
+		}
+	}
+}
+
+/* trip form styles */
+// .trip-form-search {
+// 	@extend .trip-form {
+// 		@include breakpoint-max($screen-sm - 1) {
+// 			margin-top: -85px;
+// 		}
+// 	}
+// }

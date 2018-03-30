@@ -1,0 +1,248 @@
+/* trip form variation v2 styles */
+.trip-form-v2 {
+	background: rgba($log-cabin, .88);
+	border-color: rgba($tuatara, .88);
+	color: $star-dust;
+	max-width: 670px;
+	text-align: left;
+	margin: 0 auto;
+	font-size: 14px;
+
+	label {
+		color: $star-dust;
+		font-weight: 400;
+		font-style: italic;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+	}
+
+	select {
+		width: 100%;
+	}
+
+	.form-control {
+		height: 44px;
+		color: $star-dust;
+		font-weight: 500;
+		font-size: 14px;
+		font-style: normal;
+
+		&::-webkit-input-placeholder {color: $star-dust;}
+		&:-moz-placeholder           {color: $star-dust;}
+		&::-moz-placeholder          {color: $star-dust;}
+		&:-ms-input-placeholder      {color: $star-dust;}
+	}
+
+	.input-group {
+		position: relative;
+		padding-left: 40px;
+
+		&:before {
+			content: "\e979";
+			font: 16px/18px 'icomoon';
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			transform: translate(0, -50%);
+		}
+	}
+
+	.input-group.date {
+		border: 4px solid $tundora;
+		background: none;
+		border-radius: 0;
+
+		input {
+			color: $star-dust;
+
+			&::-webkit-input-placeholder {color: $star-dust;}
+			&:-moz-placeholder           {color: $star-dust;}
+			&::-moz-placeholder          {color: $star-dust;}
+			&:-ms-input-placeholder      {color: $star-dust;}
+		}
+
+		.input-group-addon {
+			background: none;
+			color: $star-dust;
+			border: 0;
+		}
+	}
+
+	.holder {
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint-max($screen-md - 1) {
+		max-width: 600px;
+		padding: 10px 10px 20px;
+
+		.form-control {
+			height: 32px;
+			font-size: 12px;
+		}
+
+		label {
+			margin-bottom: 0;
+		}
+
+		.input-group.date {
+			border-width: 2px;
+		}
+		.holder {
+			margin-bottom: 15px;
+		}
+
+		.input-group {
+			padding-left: 30px;
+
+			&:before {
+				font-size: 12px;
+				left: 10px;
+			}
+		}
+	}
+
+	@include breakpoint-min($screen-md) {
+		.holder {
+			width: 50%;
+		}
+
+		button {
+			height: 52px;
+		}
+	}
+
+	@include breakpoint-min($screen-tab + 1) {
+		margin: 0;
+	}
+}
+
+.banner.banner-home-search {
+	.banner-image {
+		min-height: 600px;
+	}
+
+	.center-text {
+		text-align: left;
+	}
+}
+
+.trip-note {
+	font-style: italic;
+	margin: 0 25px 20px;
+	line-height: 1.4;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+
+	@include breakpoint-max($screen-md - 1) {
+		margin: 0 15px 10px;
+		font-size: 13px;
+	}
+
+	@include breakpoint-max($screen-sm - 1) {
+		margin: 0 5px 10px;
+		text-align: center;
+	}
+}
+
+.btn-holder {
+	padding: 0 25px;
+
+	@include breakpoint-max($screen-md - 1) {
+		padding: 0 15px;
+	}
+
+	@include breakpoint-max($screen-sm - 1) {
+		padding: 0 5px;
+		text-align: center;
+	}
+}
+
+.jcf-select.jcf-select-trip-select-v2 {
+	background: none;
+	border: 4px solid $tundora;
+	height: 52px;
+	width: 100%;
+
+	@include breakpoint-max($screen-md - 1) {
+		border-width: 2px;
+		height: 32px;
+	}
+
+	.jcf-select-text {
+		color: $star-dust;
+		font-size: 14px;
+		font-style: normal;
+		padding: 13px 0 13px 50px;
+		position: relative;
+
+		@include breakpoint-max($screen-md - 1) {
+			padding: 2px 0 1px 35px;
+			font-size: 12px;
+		}
+
+		&:before {
+			content: "\e979";
+			font: 16px/18px 'icomoon';
+			position: absolute;
+			left: 15px;
+			top: 50%;
+			transform: translate(0, -50%);
+
+			@include breakpoint-max($screen-md - 1) {
+				font-size: 12px;
+				left: 10px;
+			}
+		}
+	}
+
+	.jcf-select-opener {
+		padding: 0 10px;
+
+		&:after {
+			content: "\e91e";
+			right: 10px;
+			color: $star-dust;
+		}
+	}
+}
+
+.jcf-select-drop.jcf-select-trip-select-v2 {
+	background: $shark;
+
+	.jcf-list {
+		background: $shark;
+		text-transform: capitalize;
+	}
+
+	.jcf-option {
+		color: $white;
+	}
+
+	.jcf-hover {
+		background: $primary-color;
+	}
+}
+
+.trip-form-v2 .input-group.date:before {
+	content:"\e109";
+	font-family: 'Glyphicons Halflings';
+}
+
+.jcf-select.jcf-select-trip-select-v2.jcf-select-region .jcf-select-text {
+	&:before {
+		content: "\e92d";
+	}
+}
+
+.jcf-select.jcf-select-trip-select-v2.jcf-select-acitvity .jcf-select-text {
+	&:before {
+		content: "\e95e";
+	}
+}
+
+.jcf-select.jcf-select-trip-select-v2.jcf-select-price .jcf-select-text {
+	&:before {
+		content: "\e90f";
+	}
+}
